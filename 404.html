@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="14'lük - Kaliteli ve güvenilir ürünlerle tanışın. En iyi kalite standartları ile üretilen ürünlerimizi keşfedin."
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>14'lük - Kaliteli Ürünler</title>
+  </head>
+  <body>
+    <noscript>Bu uygulamayı çalıştırmak için JavaScript'i etkinleştirmeniz gerekiyor.</noscript>
+    <div id="root"></div>
+    <script>
+      // GitHub Pages için SPA routing düzeltmesi
+      // Bu script, 404 sayfasında da React uygulamasını yükler
+      sessionStorage.redirect = location.href;
+    </script>
+    <script type="text/javascript">
+      // React uygulamasını yeniden yönlendir
+      window.location.replace(window.location.origin + window.location.pathname + '#/');
+    </script>
+  </body>
+</html>
