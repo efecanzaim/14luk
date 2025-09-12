@@ -1,0 +1,119 @@
+import React, { useState } from 'react';
+import { ChevronDown, ChevronUp, HelpCircle } from 'lucide-react';
+import './FAQ.css';
+
+interface FAQItem {
+  id: number;
+  question: string;
+  answer: string;
+}
+
+const FAQ: React.FC = () => {
+  const [openItems, setOpenItems] = useState<number[]>([]);
+
+  const faqItems: FAQItem[] = [
+    {
+      id: 1,
+      question: "14'lük ile gram altın arasındaki fark nedir?",
+      answer: "14'lük altın, gram altına alternatif olarak tasarlanmış özel bir konsepttir. Gram altının yüksek maliyeti ve ziynet eşyalarının yatırım değeri eksikliği arasında köprü kuran, hem estetik hem de ekonomik değer taşıyan ürünlerdir. Düşük gramaj seçenekleri ile her keseye uygun fiyatlar sunar."
+    },
+    {
+      id: 2,
+      question: "Bu ürün yatırım altını mı?",
+      answer: "14'lük altın, takı niteliğinde ama güvenilir altın olarak tasarlanmıştır. Hem yatırım değeri hem de estetik değer taşır. 585 ayar altın kalitesinde olup, DEMAŞ A.Ş. güvencesiyle üretilmektedir. Geleneksel yatırım altınından farklı olarak, aynı zamanda takı olarak da kullanılabilir."
+    },
+    {
+      id: 3,
+      question: "Hangi gramajlarda mevcut?",
+      answer: "14'lük altın ürünlerimiz 0.5g, 1g, 1.5g, 2g, 2.5g ve 3g gramaj seçeneklerinde mevcuttur. Bu çeşitlilik sayesinde her bütçeye uygun seçenekler sunuyoruz."
+    },
+    {
+      id: 4,
+      question: "Nereden satın alabilirim?",
+      answer: "14'lük altın ürünlerimizi resmi satış kanalımız olan Altın Anne'den güvenle satın alabilirsiniz. Altın Anne, DEMAŞ A.Ş.'nin e-ticaret markası olarak güvenilir alışveriş deneyimi sunmaktadır."
+    },
+    {
+      id: 5,
+      question: "Kargo ve sigorta süreci nasıl işliyor?",
+      answer: "Tüm gönderilerimiz sigortalı kargo ile güvenle taşınır. Özel ambalajlama ile ürünleriniz korunur ve kimlik kontrolü ile güvenli teslimat yapılır. Kargo süreci genellikle 1-3 iş günü içerisinde tamamlanır."
+    },
+    {
+      id: 6,
+      question: "Altının ayarı nedir?",
+      answer: "14'lük altın ürünlerimiz 585 ayar altındır. Bu, altının %58.5 oranında saf altın içerdiği anlamına gelir. Bu ayar, hem dayanıklılık hem de değer açısından optimal bir seçimdir."
+    },
+    {
+      id: 7,
+      question: "İade ve değişim politikası nedir?",
+      answer: "30 gün içerisinde koşulsuz iade hakkınız bulunmaktadır. Ürün orijinal ambalajında ve hasarsız olarak iade edilmelidir. İade süreci hızlı ve güvenli bir şekilde gerçekleştirilir."
+    },
+    {
+      id: 8,
+      question: "DEMAŞ A.Ş. kimdir?",
+      answer: "DEMAŞ A.Ş., Borsa İstanbul üyesi olan köklü bir altın firmasıdır. Sektörde güvenilirliği ve kalitesi ile tanınan firma, 14'lük altın konseptini geliştirerek sektöre yenilik getirmiştir."
+    }
+  ];
+
+  const toggleItem = (id: number) => {
+    setOpenItems(prev => 
+      prev.includes(id) 
+        ? prev.filter(item => item !== id)
+        : [...prev, id]
+    );
+  };
+
+  return (
+    <div className="faq">
+      {/* Hero Section */}
+      <section className="faq-hero">
+        <div className="faq-hero-container">
+          <h1 className="faq-hero-title">Sık Sorulan Sorular</h1>
+          <p className="faq-hero-subtitle">
+            14'lük altın hakkında merak ettiğiniz her şey
+          </p>
+        </div>
+      </section>
+
+      {/* FAQ Content */}
+      <section className="faq-content">
+        <div className="faq-container">
+          <div className="faq-intro">
+            <div className="intro-icon">
+              <HelpCircle size={60} />
+            </div>
+            <h2>Merak Ettikleriniz</h2>
+            <p>
+              14'lük altın konsepti hakkında en çok sorulan soruları ve cevaplarını 
+              aşağıda bulabilirsiniz. Başka sorularınız varsa bizimle iletişime geçebilirsiniz.
+            </p>
+          </div>
+
+          <div className="faq-list">
+            {faqItems.map((item) => (
+              <div key={item.id} className="faq-item">
+                <button 
+                  className="faq-question"
+                  onClick={() => toggleItem(item.id)}
+                >
+                  <span>{item.question}</span>
+                  {openItems.includes(item.id) ? (
+                    <ChevronUp size={24} />
+                  ) : (
+                    <ChevronDown size={24} />
+                  )}
+                </button>
+                {openItems.includes(item.id) && (
+                  <div className="faq-answer">
+                    <p>{item.answer}</p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default FAQ;

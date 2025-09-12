@@ -1,0 +1,53 @@
+.silk-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  opacity: 0.8;
+  animation: silkPulse 4s ease-in-out infinite;
+  transform-origin: center center;
+  will-change: opacity;
+}
+
+@keyframes silkPulse {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+/* Three.js Canvas için stil */
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  opacity: 0.8;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .silk-canvas {
+    height: 100vh;
+  }
+  
+  canvas {
+    height: 100vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .silk-canvas {
+    height: 100vh;
+  }
+  
+  canvas {
+    height: 100vh;
+  }
+}

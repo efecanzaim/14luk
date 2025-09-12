@@ -1,0 +1,223 @@
+.fixed-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: transparent; /* Başlangıçta transparan */
+  backdrop-filter: none;
+  border-bottom: none;
+  box-shadow: none;
+  transition: all 0.3s ease;
+}
+
+.fixed-navbar.scrolled {
+  background: rgba(255, 255, 255, 0.1); /* Çok hafif beyaz şeffaf */
+  backdrop-filter: blur(15px); /* Daha güçlü bulanıklık */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.fixed-navbar.scrolled .navbar-link {
+  color: #041234; /* Scroll sonrası lacivert */
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+  height: 90px;
+  gap: 3rem;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-text {
+  font-family: 'Geist', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff; /* Başlangıçta beyaz */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.fixed-navbar.scrolled .logo-text {
+  color: #041234; /* Scroll sonrası lacivert */
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navbar-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  color: #ffffff; /* Başlangıçta beyaz */
+  font-family: 'Geist', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  position: relative;
+}
+
+.navbar-link:hover {
+  background: #ffb600;
+  color: #041234;
+  transform: translateY(-2px);
+}
+
+.navbar-link.active {
+  background: #ffb600;
+  color: #041234;
+}
+
+.navbar-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  background: #041234;
+  border-radius: 50%;
+}
+
+.navbar-icon {
+  display: flex;
+  align-items: center;
+}
+
+/* Mobile Menu Button */
+.mobile-menu-button {
+  display: none;
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-button:hover {
+  background: rgba(255, 182, 0, 0.1);
+  color: #ffb600;
+}
+
+.fixed-navbar.scrolled .mobile-menu-button {
+  color: #041234;
+}
+
+.fixed-navbar.scrolled .mobile-menu-button:hover {
+  background: rgba(255, 182, 0, 0.1);
+  color: #ffb600;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(15px);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  flex-direction: column;
+  gap: 0.5rem;
+  transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu.open {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-menu-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  color: #041234;
+  font-family: 'Geist', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.mobile-menu-link:hover {
+  background: #ffb600;
+  color: #041234;
+}
+
+.mobile-menu-link.active {
+  background: #ffb600;
+  color: #041234;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 0 1rem;
+    height: 80px;
+    justify-content: space-between;
+  }
+  
+  .logo-text {
+    font-size: 22px;
+  }
+  
+  .navbar-links {
+    display: none;
+  }
+  
+  .mobile-menu-button {
+    display: block;
+  }
+  
+  .mobile-menu {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-links {
+    gap: 0.5rem;
+  }
+  
+  .navbar-link {
+    padding: 0.5rem 0.75rem;
+    font-size: 11px;
+  }
+  
+  .navbar-link span:not(.navbar-icon) {
+    display: none;
+  }
+}

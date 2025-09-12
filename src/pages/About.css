@@ -1,0 +1,352 @@
+.about {
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.about-hero {
+  background: linear-gradient(135deg, #041234 0%, #0a1f4a 100%);
+  padding: 120px 0 80px;
+  color: white;
+  text-align: center;
+}
+
+.about-hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.about-hero-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-family: 'Geist', sans-serif;
+}
+
+.about-hero-subtitle {
+  font-size: 20px;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Main Content */
+.about-content {
+  padding: 80px 0;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.about-intro {
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+.about-intro h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #041234;
+  margin-bottom: 30px;
+  font-family: 'Geist', sans-serif;
+}
+
+.about-intro p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto 20px;
+}
+
+/* Comparison Section */
+.about-comparison {
+  margin-bottom: 80px;
+}
+
+.about-comparison h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #041234;
+  text-align: center;
+  margin-bottom: 50px;
+  font-family: 'Geist', sans-serif;
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.comparison-item {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  border: 2px solid #e0f0e8;
+  transition: all 0.3s ease;
+}
+
+.comparison-item.highlight {
+  border-color: #041234;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  transform: scale(1.05);
+}
+
+.comparison-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(45, 127, 72, 0.1);
+}
+
+.comparison-item.highlight:hover {
+  transform: scale(1.05) translateY(-5px);
+}
+
+.comparison-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #ffb600 0%, #ffc633 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px;
+  color: #041234;
+}
+
+.comparison-item.highlight .comparison-icon {
+  background: linear-gradient(135deg, #041234 0%, #0a1f4a 100%);
+  color: #ffb600;
+}
+
+.comparison-item h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #041234;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.comparison-item ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.comparison-item li {
+  padding: 8px 0;
+  color: #666;
+  position: relative;
+  padding-left: 25px;
+}
+
+.comparison-item li::before {
+  content: '•';
+  color: #041234;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* Features Section */
+.about-features {
+  margin-bottom: 80px;
+}
+
+.about-features h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #041234;
+  text-align: center;
+  margin-bottom: 50px;
+  font-family: 'Geist', sans-serif;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.feature-item {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e0f0e8;
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(45, 127, 72, 0.1);
+}
+
+.feature-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #ffb600 0%, #ffc633 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px;
+  color: #041234;
+}
+
+.feature-item h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #041234;
+  margin-bottom: 15px;
+}
+
+.feature-item p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* Companies Section */
+.about-companies {
+  margin-bottom: 80px;
+  background: linear-gradient(135deg, #f8fffe 0%, #e8f5f0 100%);
+  padding: 60px 0;
+  border-radius: 30px;
+}
+
+.about-companies h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #041234;
+  text-align: center;
+  margin-bottom: 50px;
+  font-family: 'Geist', sans-serif;
+}
+
+.companies-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.company-info {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.company-info h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #041234;
+  margin-bottom: 20px;
+  font-family: 'Geist', sans-serif;
+}
+
+.company-info p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.company-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.company-info li {
+  padding: 8px 0;
+  color: #666;
+  position: relative;
+  padding-left: 25px;
+}
+
+.company-info li::before {
+  content: '✓';
+  color: #041234;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .about-hero {
+    padding: 80px 0 60px;
+  }
+
+  .about-hero-title {
+    font-size: 36px;
+  }
+
+  .about-hero-subtitle {
+    font-size: 18px;
+  }
+
+  .about-content {
+    padding: 60px 0;
+  }
+
+  .about-intro h2,
+  .about-comparison h2,
+  .about-features h2,
+  .about-companies h2 {
+    font-size: 28px;
+  }
+
+  .comparison-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .comparison-item.highlight {
+    transform: none;
+  }
+
+  .comparison-item.highlight:hover {
+    transform: translateY(-5px);
+  }
+
+  .companies-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .about-hero-title {
+    font-size: 28px;
+  }
+
+  .about-hero-subtitle {
+    font-size: 16px;
+  }
+
+  .about-intro p {
+    font-size: 16px;
+  }
+
+  .comparison-item,
+  .feature-item,
+  .company-info {
+    padding: 30px 20px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}

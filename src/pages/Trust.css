@@ -1,0 +1,440 @@
+.trust {
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.trust-hero {
+  background: linear-gradient(135deg, #041234 0%, #0a1f4a 100%);
+  padding: 120px 0 80px;
+  color: white;
+  text-align: center;
+}
+
+.trust-hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.trust-hero-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-family: 'Geist', sans-serif;
+}
+
+.trust-hero-subtitle {
+  font-size: 20px;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Gold Quality Section */
+.gold-quality {
+  padding: 80px 0;
+  background: white;
+}
+
+.trust-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.quality-content h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #041234;
+  text-align: center;
+  margin-bottom: 50px;
+  font-family: 'Geist', sans-serif;
+}
+
+.quality-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.quality-card {
+  background: linear-gradient(135deg, #f8fffe 0%, #e8f5f0 100%);
+  padding: 40px 30px;
+  border-radius: 20px;
+  text-align: center;
+  border: 1px solid #e0f0e8;
+  transition: all 0.3s ease;
+}
+
+.quality-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(45, 127, 72, 0.1);
+}
+
+.quality-icon {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, #ffb600 0%, #ffc633 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px;
+  color: #041234;
+}
+
+.quality-card h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #041234;
+  margin-bottom: 15px;
+}
+
+.quality-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* DEMAŞ Section */
+.demas-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f8fffe 0%, #e8f5f0 100%);
+}
+
+.demas-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.demas-info h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #041234;
+  margin-bottom: 25px;
+  font-family: 'Geist', sans-serif;
+}
+
+.demas-info p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.demas-features {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.demas-feature {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 16px;
+  color: #041234;
+  font-weight: 500;
+}
+
+.demas-feature svg {
+  color: #0a1f4a;
+  flex-shrink: 0;
+}
+
+.demas-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.building-icon {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(135deg, #ffb600 0%, #ffc633 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #041234;
+}
+
+/* Shipping Section */
+.shipping-section {
+  padding: 80px 0;
+  background: white;
+}
+
+.shipping-section h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #041234;
+  text-align: center;
+  margin-bottom: 50px;
+  font-family: 'Geist', sans-serif;
+}
+
+.shipping-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.shipping-card {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e0f0e8;
+  transition: all 0.3s ease;
+}
+
+.shipping-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(45, 127, 72, 0.1);
+}
+
+.shipping-icon {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, #ffb600 0%, #ffc633 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px;
+  color: #041234;
+}
+
+.shipping-card h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #041234;
+  margin-bottom: 15px;
+}
+
+.shipping-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* Altın Anne Section */
+.altin-anne-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #041234 0%, #0a1f4a 100%);
+  color: white;
+}
+
+.altin-anne-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.altin-anne-info h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  font-family: 'Geist', sans-serif;
+}
+
+.altin-anne-info p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+.altin-anne-features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.feature-item {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+}
+
+.feature-number {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffb600;
+  margin-bottom: 10px;
+}
+
+.feature-text {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.altin-anne-cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.altin-anne-button {
+  background: #ffb600;
+  color: #041234;
+  text-decoration: none;
+  padding: 18px 36px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(189, 255, 211, 0.3);
+}
+
+.altin-anne-button:hover {
+  background: #ffc633;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(189, 255, 211, 0.4);
+}
+
+/* CTA Section */
+.trust-cta {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #ffb600 0%, #ffc633 100%);
+  text-align: center;
+}
+
+.cta-content h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #041234;
+  margin-bottom: 20px;
+  font-family: 'Geist', sans-serif;
+}
+
+.cta-content p {
+  font-size: 18px;
+  color: #041234;
+  margin-bottom: 40px;
+  opacity: 0.8;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-button {
+  padding: 16px 32px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.cta-button.primary {
+  background: #041234;
+  color: white;
+}
+
+.cta-button.primary:hover {
+  background: #1a5a35;
+  transform: translateY(-2px);
+}
+
+.cta-button.secondary {
+  background: transparent;
+  color: #041234;
+  border-color: #041234;
+}
+
+.cta-button.secondary:hover {
+  background: #041234;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .trust-hero {
+    padding: 80px 0 60px;
+  }
+
+  .trust-hero-title {
+    font-size: 36px;
+  }
+
+  .trust-hero-subtitle {
+    font-size: 18px;
+  }
+
+  .demas-content,
+  .altin-anne-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .altin-anne-features {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .building-icon {
+    width: 150px;
+    height: 150px;
+  }
+
+  .building-icon svg {
+    width: 80px;
+    height: 80px;
+  }
+
+  .quality-content h2,
+  .shipping-section h2,
+  .altin-anne-info h2,
+  .cta-content h2 {
+    font-size: 28px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .trust-hero-title {
+    font-size: 28px;
+  }
+
+  .trust-hero-subtitle {
+    font-size: 16px;
+  }
+
+  .quality-grid,
+  .shipping-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .quality-card,
+  .shipping-card {
+    padding: 30px 20px;
+  }
+
+  .feature-number {
+    font-size: 24px;
+  }
+}

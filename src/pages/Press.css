@@ -1,0 +1,262 @@
+.press {
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.press-hero {
+  background: linear-gradient(135deg, #041234 0%, #0a1f4a 100%);
+  padding: 120px 0 80px;
+  color: white;
+  text-align: center;
+}
+
+.press-hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.press-hero-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-family: 'Geist', sans-serif;
+}
+
+.press-hero-subtitle {
+  font-size: 20px;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Press Stats */
+.press-stats {
+  padding: 60px 0;
+  background: white;
+}
+
+.press-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 30px 20px;
+  background: linear-gradient(135deg, #f8fffe 0%, #e8f5f0 100%);
+  border-radius: 20px;
+  border: 1px solid #e0f0e8;
+  transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(45, 127, 72, 0.1);
+}
+
+.stat-number {
+  font-size: 36px;
+  font-weight: 700;
+  color: #041234;
+  margin-bottom: 10px;
+  font-family: 'Geist', sans-serif;
+}
+
+.stat-label {
+  font-size: 16px;
+  color: #666;
+  font-weight: 500;
+}
+
+/* Press Items */
+.press-items {
+  padding: 80px 0;
+  background: #f8fffe;
+}
+
+.press-items h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #041234;
+  text-align: center;
+  margin-bottom: 50px;
+  font-family: 'Geist', sans-serif;
+}
+
+.press-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+}
+
+.press-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e0f0e8;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.press-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(45, 127, 72, 0.15);
+}
+
+.press-card-header {
+  padding: 20px 25px;
+  background: linear-gradient(135deg, #f8fffe 0%, #e8f5f0 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e0f0e8;
+}
+
+.press-category {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #041234;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.press-date {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #666;
+  font-size: 14px;
+}
+
+.press-card-content {
+  padding: 25px;
+}
+
+.press-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #041234;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.press-source {
+  font-size: 14px;
+  color: #0a1f4a;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.press-excerpt {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.press-card-footer {
+  padding: 0 25px 25px;
+}
+
+.press-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #041234;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.press-link:hover {
+  color: #1a5a35;
+  gap: 12px;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .press-hero {
+    padding: 80px 0 60px;
+  }
+
+  .press-hero-title {
+    font-size: 36px;
+  }
+
+  .press-hero-subtitle {
+    font-size: 18px;
+  }
+
+  .press-stats {
+    padding: 40px 0;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .press-items {
+    padding: 60px 0;
+  }
+
+  .press-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .press-items h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .press-hero-title {
+    font-size: 28px;
+  }
+
+  .press-hero-subtitle {
+    font-size: 16px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-number {
+    font-size: 28px;
+  }
+
+  .press-card-header {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+
+  .press-card-content {
+    padding: 20px;
+  }
+
+  .press-title {
+    font-size: 18px;
+  }
+
+  .press-excerpt {
+    font-size: 14px;
+  }
+
+}
