@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, useLocation, Link } from 'react-router-dom';
 import { ShoppingCart, House, Menu, X } from 'lucide-react';
 import Footer from './components/Footer';
 import './components/FixedNavbar.css';
@@ -53,15 +53,15 @@ function AppContent() {
           </div>
           <div className="navbar-links">
             {navItems.map((item, index) => (
-              <a
+              <Link
                 key={index}
-                href={item.href}
+                to={item.href}
                 className={`navbar-link ${location.pathname === item.href ? 'active' : ''}`}
                 aria-label={item.ariaLabel}
               >
                 {item.icon && <span className="navbar-icon">{item.icon}</span>}
                 {item.label}
-              </a>
+              </Link>
             ))}
           </div>
           
@@ -77,16 +77,16 @@ function AppContent() {
         {/* Mobile Menu */}
         <div className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
           {navItems.map((item, index) => (
-            <a
+            <Link
               key={index}
-              href={item.href}
+              to={item.href}
               className={`mobile-menu-link ${location.pathname === item.href ? 'active' : ''}`}
               aria-label={item.ariaLabel}
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {item.icon && <span className="navbar-icon">{item.icon}</span>}
               {item.label}
-            </a>
+            </Link>
           ))}
         </div>
       </nav>
