@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { ShoppingCart, House, Menu, X } from 'lucide-react';
 import Footer from './components/Footer';
 import './components/FixedNavbar.css';
