@@ -26,8 +26,8 @@ const Trust: React.FC = () => {
                 <div className="quality-icon">
                   <Award size={50} />
                 </div>
-                <h3>Yüksek Ayar</h3>
-                <p>585 ayar altın ile en yüksek kalite standartları</p>
+                <h3>Güvenilir Altın</h3>
+                <p>585 ayar altın ile yüksek kalite standartları</p>
               </div>
               <div className="quality-card">
                 <div className="quality-icon">
@@ -139,10 +139,6 @@ const Trust: React.FC = () => {
                 <div className="feature-item">
                   <div className="feature-number">24h</div>
                   <div className="feature-text">Hızlı Kargo</div>
-                </div>
-                <div className="feature-item">
-                  <div className="feature-number">30</div>
-                  <div className="feature-text">Gün İade</div>
                 </div>
               </div>
             </div>

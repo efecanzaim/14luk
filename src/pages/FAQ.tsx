@@ -44,11 +44,6 @@ const FAQ: React.FC = () => {
     },
     {
       id: 7,
-      question: "İade ve değişim politikası nedir?",
-      answer: "30 gün içerisinde koşulsuz iade hakkınız bulunmaktadır. Ürün orijinal ambalajında ve hasarsız olarak iade edilmelidir. İade süreci hızlı ve güvenli bir şekilde gerçekleştirilir."
-    },
-    {
-      id: 8,
       question: "DEMAŞ A.Ş. kimdir?",
       answer: "DEMAŞ A.Ş., Borsa İstanbul üyesi olan köklü bir altın firmasıdır. Sektörde güvenilirliği ve kalitesi ile tanınan firma, 14'lük altın konseptini geliştirerek sektöre yenilik getirmiştir."
     }

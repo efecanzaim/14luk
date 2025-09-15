@@ -42,6 +42,42 @@
   padding: 0 20px;
 }
 
+/* 14 Ayar Altın Info Section */
+.about-14k-info {
+  margin-bottom: 80px;
+  background: linear-gradient(135deg, #f8fffe 0%, #e8f5f0 100%);
+  padding: 60px 40px;
+  border-radius: 25px;
+  border: 2px solid #e0f0e8;
+}
+
+.about-14k-info h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #041234;
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: 'Geist', sans-serif;
+}
+
+.info-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.info-content p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 25px;
+  text-align: justify;
+}
+
+.info-content p strong {
+  color: #041234;
+  font-weight: 600;
+}
+
 .about-intro {
   margin-bottom: 80px;
   text-align: center;
@@ -298,6 +334,19 @@
 
   .about-content {
     padding: 60px 0;
+  }
+
+  .about-14k-info {
+    padding: 40px 20px;
+  }
+
+  .about-14k-info h2 {
+    font-size: 28px;
+  }
+
+  .info-content p {
+    font-size: 16px;
+    text-align: left;
   }
 
   .about-intro h2,

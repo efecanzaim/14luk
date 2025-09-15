@@ -56,6 +56,15 @@ const Home: React.FC = () => {
                   <span>Ürünleri İncele</span>
                 </Link>
               </div>
+              <div className="hero-info">
+                <p className="hero-info-text">
+                  <strong>Altın Anne güvencesiyle</strong> 585 ayar saf altın kalitesinde <strong>KV GOLD</strong> tarafından üretilen 14'lük koleksiyonumuz, 
+                  yatırım değerinizi korurken şıklığınızı da tamamlıyor.
+                  <span className="highlight-text"> Kare, yuvarlak, kalp ve yonca</span> formlarında, 
+                  <span className="highlight-text"> 1gr'den 100gr'ye</span> kadar geniş gramaj yelpazesi ile 
+                  her bütçeye uygun, özel tasarım yatırım hediyelik mücevherat eşyası.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -94,7 +103,7 @@ const Home: React.FC = () => {
                   Yatırımın değerini, şıklığınızla buluşturun. Kare, yuvarlak ve kalp formlarında tasarlanan koleksiyonumuz; bileklik ve kolye olarak kullanılabilecek zamansız parçalar sunuyor.
                 </p>
                 <p className="product-specs">
-                  1 g, 2.5 g, 5 g ve 10 g seçenekleri ile her bütçeye uygun, 585 ayar yüksek kaliteli altın garantisiyle.
+                  1gr, 2.5gr, 5gr, 10gr, 20gr, 50gr, 100gr seçenekleri ile her bütçeye uygun, 585 ayar yüksek kaliteli özel tasarım yatırım hediyelik mücevherat eşyası.
                 </p>
                 <p className="product-tagline">
                   Hem yatırım hem de stilinizi tamamlayan özel bir koleksiyon.
@@ -125,7 +134,7 @@ const Home: React.FC = () => {
               >
                 <Card style={{ backgroundColor: '#ffb600', color: '#041234', padding: 0, overflow: 'hidden' }}>
                   <img 
-                    src="/14luk.png" 
+                    src={`${process.env.PUBLIC_URL}/14luk.png`} 
                     alt="14'lük Altın - Değerli Ama Uygun" 
                     style={{ 
                       width: '100%', 
@@ -137,7 +146,7 @@ const Home: React.FC = () => {
                 </Card>
                 <Card style={{ backgroundColor: '#041234', color: '#fff', padding: 0, overflow: 'hidden' }}>
                   <img 
-                    src="/14luk.png" 
+                    src={`${process.env.PUBLIC_URL}/14luk.png`} 
                     alt="14'lük Altın - DEMAŞ Güvencesi" 
                     style={{ 
                       width: '100%', 
@@ -149,7 +158,7 @@ const Home: React.FC = () => {
                 </Card>
                 <Card style={{ backgroundColor: '#1a2d5c', color: '#fff', padding: 0, overflow: 'hidden' }}>
                   <img 
-                    src="/14luk.png" 
+                    src={`${process.env.PUBLIC_URL}/14luk.png`} 
                     alt="14'lük Altın - 585 Ayar Altın" 
                     style={{ 
                       width: '100%', 
@@ -173,14 +182,14 @@ const Home: React.FC = () => {
             <div className="product-card">
               <div className="product-image">
                 <img 
-                  src="/14luk.png" 
+                  src={`${process.env.PUBLIC_URL}/14luk-kare.png`} 
                   alt="Dikdörtgen 14'lük"
                   className="product-photo"
                 />
               </div>
               
               <div className="product-info">
-                <h3 className="product-name">Dikdörtgen 14'lük</h3>
+                <h3 className="product-name">Klasik 14'lük</h3>
                 <p className="product-description">Klasik tasarım, zamansız güzellik. Geleneksel altın yatırımına modern bir alternatif.</p>
                 
                 <div className="product-features">
@@ -210,19 +219,29 @@ const Home: React.FC = () => {
                   <div className="weight-options">
                     <span className="weight-option">
                       <Weight size={14} />
-                      1g
+                      1gr
                     </span>
                     <span className="weight-option">
                       <Weight size={14} />
-                      2.5g
+                      2.5gr
                     </span>
                     <span className="weight-option">
                       <Weight size={14} />
-                      5g
+                      5gr
                     </span>
                     <span className="weight-option">
                       <Weight size={14} />
-                      10g
+                      10gr
+                    </span>
+                    <span className="weight-option">
+                      <Weight size={14} />
+                      20gr
+                    </span><span className="weight-option">
+                      <Weight size={14} />
+                      50gr
+                    </span><span className="weight-option">
+                      <Weight size={14} />
+                      100gr
                     </span>
                   </div>
                 </div>
@@ -243,7 +262,7 @@ const Home: React.FC = () => {
             <div className="product-card">
               <div className="product-image">
                 <img 
-                  src="/14luk.png" 
+                  src={`${process.env.PUBLIC_URL}/14luk-yuvarlak.png`} 
                   alt="Yuvarlak 14'lük"
                   className="product-photo"
                 />
@@ -280,19 +299,31 @@ const Home: React.FC = () => {
                   <div className="weight-options">
                     <span className="weight-option">
                       <Weight size={14} />
-                      1g
+                      1gr
                     </span>
                     <span className="weight-option">
                       <Weight size={14} />
-                      2.5g
+                      2.5gr
                     </span>
                     <span className="weight-option">
                       <Weight size={14} />
-                      5g
+                      5gr
                     </span>
                     <span className="weight-option">
                       <Weight size={14} />
-                      10g
+                      10gr
+                    </span>
+                    <span className="weight-option">
+                      <Weight size={14} />
+                      20gr
+                    </span>
+                    <span className="weight-option">
+                      <Weight size={14} />
+                      50gr
+                    </span>
+                    <span className="weight-option">
+                      <Weight size={14} />
+                      100gr
                     </span>
                   </div>
                 </div>
@@ -313,7 +344,7 @@ const Home: React.FC = () => {
             <div className="product-card">
               <div className="product-image">
                 <img 
-                  src="/14luk.png" 
+                  src={`${process.env.PUBLIC_URL}/14luk-kalp.png`} 
                   alt="Kalp 14'lük"
                   className="product-photo"
                 />
@@ -350,19 +381,113 @@ const Home: React.FC = () => {
                   <div className="weight-options">
                     <span className="weight-option">
                       <Weight size={14} />
-                      1g
+                      1gr
                     </span>
                     <span className="weight-option">
                       <Weight size={14} />
-                      2.5g
+                      2.5gr
                     </span>
                     <span className="weight-option">
                       <Weight size={14} />
-                      5g
+                      5gr
                     </span>
                     <span className="weight-option">
                       <Weight size={14} />
-                      10g
+                      10gr
+                    </span>
+                    <span className="weight-option">
+                      <Weight size={14} />
+                      20gr
+                    </span>
+                    <span className="weight-option">
+                      <Weight size={14} />
+                      50gr
+                    </span>
+                    <span className="weight-option">
+                      <Weight size={14} />
+                      100gr
+                    </span>
+                  </div>
+                </div>
+
+                <div className="product-price">
+                  <span className="price-label">Uygun fiyatlar</span>
+                </div>
+
+                <div className="product-actions">
+                  <Link to="/altin-anne" className="buy-button">
+                    <ShoppingBag size={20} />
+                    <span>Satın Al</span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            <div className="product-card">
+              <div className="product-image">
+                <img 
+                  src={`${process.env.PUBLIC_URL}/14luk-kare.png`} 
+                  alt="Yonca 14'lük"
+                  className="product-photo"
+                />
+              </div>
+              
+              <div className="product-info">
+                <h3 className="product-name">Yonca 14'lük</h3>
+                <p className="product-description">Şans ve bereket sembolü. Özel tasarım ile şansınızı artırın.</p>
+                
+                <div className="product-features">
+                  <h4>Özellikler:</h4>
+                  <ul>
+                    <li>
+                      <Star size={16} />
+                      <span>585 ayar altın</span>
+                    </li>
+                    <li>
+                      <Star size={16} />
+                      <span>Yonca tasarım</span>
+                    </li>
+                    <li>
+                      <Star size={16} />
+                      <span>Şans sembolü</span>
+                    </li>
+                    <li>
+                      <Star size={16} />
+                      <span>Özel koleksiyon</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="product-weights">
+                  <h4>Gramaj Seçenekleri:</h4>
+                  <div className="weight-options">
+                    <span className="weight-option">
+                      <Weight size={14} />
+                      1gr
+                    </span>
+                    <span className="weight-option">
+                      <Weight size={14} />
+                      2.5gr
+                    </span>
+                    <span className="weight-option">
+                      <Weight size={14} />
+                      5gr
+                    </span>
+                    <span className="weight-option">
+                      <Weight size={14} />
+                      10gr
+                    </span>
+                    <span className="weight-option">
+                      <Weight size={14} />
+                      20gr
+                    </span>
+                    <span className="weight-option">
+                      <Weight size={14} />
+                      50gr
+                    </span>
+                    <span className="weight-option">
+                      <Weight size={14} />
+                      100gr
                     </span>
                   </div>
                 </div>

@@ -6,7 +6,7 @@ import './Products.css';
 interface Product {
   id: string;
   name: string;
-  type: 'square' | 'circle' | 'heart';
+  type: 'square' | 'circle' | 'heart' | 'clover';
   description: string;
   weights: string[];
   price: string;
@@ -24,7 +24,7 @@ const Products: React.FC = () => {
       weights: ['1g', '2.5g', '5g', '10g'],
       price: 'Uygun fiyatlar',
       features: ['585 ayar altın', 'Klasik tasarım', 'Yatırım değeri', 'Hediyelik uygun'],
-      image: '/14luk.png'
+      image: `${process.env.PUBLIC_URL}/14luk-kare.png`
     },
     {
       id: '2',
@@ -34,7 +34,7 @@ const Products: React.FC = () => {
       weights: ['1g', '2.5g', '5g', '10g'],
       price: 'Uygun fiyatlar',
       features: ['585 ayar altın', 'Şık tasarım', 'Ziynet benzeri', 'Çok amaçlı kullanım'],
-      image: '/14luk.png'
+      image: `${process.env.PUBLIC_URL}/14luk-yuvarlak.png`
     },
     {
       id: '3',
@@ -44,7 +44,17 @@ const Products: React.FC = () => {
       weights: ['1g', '2.5g', '5g', '10g'],
       price: 'Uygun fiyatlar',
       features: ['585 ayar altın', 'Kalp tasarım', 'Hediyelik uygun', 'Duygusal değer'],
-      image: '/14luk.png'
+      image: `${process.env.PUBLIC_URL}/14luk-kalp.png`
+    },
+    {
+      id: '4',
+      name: 'Yonca 14\'lük',
+      type: 'clover',
+      description: 'Şans ve bereket sembolü. Özel tasarım ile şansınızı artırın.',
+      weights: ['1g', '2.5g', '5g', '10g'],
+      price: 'Uygun fiyatlar',
+      features: ['585 ayar altın', 'Yonca tasarım', 'Şans sembolü', 'Özel koleksiyon'],
+      image: `${process.env.PUBLIC_URL}/14luk-kare.png`
     }
   ];
 
@@ -57,7 +67,7 @@ const Products: React.FC = () => {
         <div className="products-hero-container">
           <h1 className="products-hero-title">14'lük Ürün Çeşitleri</h1>
           <p className="products-hero-subtitle">
-            Her zevke ve ihtiyaca uygun, kaliteli ve güvenilir altın ürünleri
+            Her zevke ve ihtiyaca uygun, kaliteli ve güvenilir özel tasarım yatırım hediyelik mücevherat eşyaları
           </p>
         </div>
       </section>

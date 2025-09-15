@@ -47,6 +47,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
+  justify-content: center;
 }
 
 .product-card {
@@ -241,10 +242,15 @@
   .products-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
   }
 
   .product-card {
-    margin: 0 10px;
+    margin: 0;
+    max-width: 280px;
+    justify-self: center;
   }
 
 
@@ -288,6 +294,15 @@
   .products-grid {
     grid-template-columns: 1fr;
     gap: 20px;
+    justify-content: center;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  .product-card {
+    max-width: 320px;
+    justify-self: center;
+    margin: 0 auto;
   }
 
 

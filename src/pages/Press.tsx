@@ -10,63 +10,30 @@ interface PressItem {
   excerpt: string;
   category: 'news' | 'interview' | 'article';
   link: string;
+  image: string;
 }
 
 const Press: React.FC = () => {
   const pressItems: PressItem[] = [
     {
       id: 1,
-      title: "14'lük Altın Konsepti Sektörde Yenilik Getiriyor",
-      source: "Altın Borsası Dergisi",
-      date: "15 Aralık 2024",
-      excerpt: "DEMAŞ A.Ş.'nin geliştirdiği 14'lük altın konsepti, geleneksel altın yatırımına alternatif sunarak sektörde büyük ilgi görüyor...",
+      title: "Minikler, Ünlü Şef Mehmet Yalçınkaya ile mutfağa ilk adımlarını attı",
+      source: "İHA - İhlas Haber Ajansı",
+      date: "7 Ağustos 2025",
+      excerpt: "Altın Anne markası, çocuklara hem mutfak sevgisi hem de tasarruf bilinci kazandıran özel bir etkinliğe imza attı. Ünlü Şef Mehmet Yalçınkaya'nın ev sahipliğinde GastroArena'da düzenlenen atölyede minik şefler, unutulmaz bir mutfak deneyimi yaşadı.",
       category: 'news',
-      link: "#"
+      link: "https://www.iha.com.tr/istanbul-haberleri/minikler-unlu-sef-mehmet-yalcinkaya-ile-mutfaga-ilk-adimlarini-atti-280957767",
+      image: "https://cdn.iha.com.tr/Contents/25-08/19/aw512842_01.jpg"
     },
     {
       id: 2,
-      title: "Altın Anne ile E-ticarette Güvenli Alışveriş",
-      source: "E-ticaret Haber",
-      date: "10 Aralık 2024",
-      excerpt: "DEMAŞ A.Ş.'nin e-ticaret markası Altın Anne, 14'lük altın ürünleri ile müşterilere güvenli alışveriş deneyimi sunuyor...",
-      category: 'article',
-      link: "#"
-    },
-    {
-      id: 3,
-      title: "DEMAŞ A.Ş. CEO'su ile Röportaj: 14'lük Altının Geleceği",
-      source: "Finans Dünyası",
-      date: "5 Aralık 2024",
-      excerpt: "DEMAŞ A.Ş. CEO'su, 14'lük altın konseptinin geliştirilme süreci ve sektöre getirdiği yenilikler hakkında konuştu...",
-      category: 'interview',
-      link: "#"
-    },
-    {
-      id: 4,
-      title: "Borsa İstanbul Üyesi DEMAŞ'tan Yeni Ürün Lansmanı",
-      source: "Borsa Haber",
-      date: "1 Aralık 2024",
-      excerpt: "Borsa İstanbul üyesi DEMAŞ A.Ş., 14'lük altın ürünlerinin lansmanını gerçekleştirdi. Ürünler büyük ilgi gördü...",
+      title: "Ünlü Şef Mehmet Yalçınkaya ile Minikler Mutfağa İlk Adımlarını Attı",
+      source: "MSN Haber",
+      date: "7 Ağustos 2025",
+      excerpt: "Altın Anne markası tarafından düzenlenen 'Altın Anne Çocuk Buluşması' etkinliğinde çocuklar, ünlü şef Mehmet Yalçınkaya ile birlikte mutfakta pizza ve kurabiye yapımı öğrendi. Etkinlik, çocuklara tasarruf bilinci ve mutfak sevgisi kazandırmayı amaçlıyor.",
       category: 'news',
-      link: "#"
-    },
-    {
-      id: 5,
-      title: "Altın Yatırımında Yeni Trend: 14'lük Altın",
-      source: "Yatırım Dünyası",
-      date: "25 Kasım 2024",
-      excerpt: "Geleneksel altın yatırımından farklı olarak tasarlanan 14'lük altın, hem yatırım hem de takı değeri taşıyor...",
-      category: 'article',
-      link: "#"
-    },
-    {
-      id: 6,
-      title: "DEMAŞ A.Ş. ve Altın Anne Marka Değerini Artırıyor",
-      source: "Marka Dünyası",
-      date: "20 Kasım 2024",
-      excerpt: "DEMAŞ A.Ş. ve Altın Anne markaları, 14'lük altın konsepti ile sektörde güçlü bir konum elde ediyor...",
-      category: 'news',
-      link: "#"
+      link: "https://www.msn.com/tr-tr/haber/other/ünlü-şef-mehmet-yalçınkaya-ile-minikler-mutfağa-ilk-adımlarını-attı/ar-AA1K5rez",
+      image: "https://cdn.iha.com.tr/Contents/25-08/19/aw512842_02.jpg"
     }
   ];
 
@@ -108,30 +75,6 @@ const Press: React.FC = () => {
         </div>
       </section>
 
-      {/* Press Stats */}
-      <section className="press-stats">
-        <div className="press-container">
-          <div className="stats-grid">
-            <div className="stat-item">
-              <div className="stat-number">50+</div>
-              <div className="stat-label">Basın Haberi</div>
-            </div>
-            <div className="stat-item">
-              <div className="stat-number">15+</div>
-              <div className="stat-label">Röportaj</div>
-            </div>
-            <div className="stat-item">
-              <div className="stat-number">25+</div>
-              <div className="stat-label">Makale</div>
-            </div>
-            <div className="stat-item">
-              <div className="stat-number">100K+</div>
-              <div className="stat-label">Okunma</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Press Items */}
       <section className="press-items">
         <div className="press-container">
@@ -139,6 +82,10 @@ const Press: React.FC = () => {
           <div className="press-grid">
             {pressItems.map((item) => (
               <div key={item.id} className="press-card">
+                <div className="press-card-image">
+                  <img src={item.image} alt={item.title} />
+                </div>
+                
                 <div className="press-card-header">
                   <div className="press-category">
                     {getCategoryIcon(item.category)}
@@ -157,7 +104,7 @@ const Press: React.FC = () => {
                 </div>
                 
                 <div className="press-card-footer">
-                  <a href={item.link} className="press-link">
+                  <a href={item.link} className="press-link" target="_blank" rel="noopener noreferrer">
                     <span>Devamını Oku</span>
                     <ExternalLink size={16} />
                   </a>

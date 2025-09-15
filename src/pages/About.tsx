@@ -10,7 +10,7 @@ const About: React.FC = () => {
         <div className="about-hero-container">
           <h1 className="about-hero-title">14'lük Konsepti</h1>
           <p className="about-hero-subtitle">
-            Gram altına ve ziynete alternatif, uygun fiyatlı ama değerli ürün
+            Gram altına ve ziynete alternatif, uygun fiyatlı özel tasarım yatırım hediyelik mücevherat eşyası
           </p>
         </div>
       </section>
@@ -18,6 +18,29 @@ const About: React.FC = () => {
       {/* Main Content */}
       <section className="about-content">
         <div className="about-container">
+          <div className="about-14k-info">
+            <h2>14 Ayar Altın: Değerli ve Akıllı Seçim</h2>
+            <div className="info-content">
+              <p>
+                <strong>14 ayar altın, altın yatırımında hiçbir şey kaybetmediğiniz, tam tersine kazandığınız bir seçimdir. </strong> 
+                Çoğu kişi 14 ayar altının "düşük kalite" olduğunu düşünür, ancak bu tamamen yanlış bir algıdır.
+              </p>
+              <p>
+                14 ayar altın, %58.5 saf altın içerir ve geri kalan %41.5'i gümüş, bakır gibi dayanıklılık sağlayan metallerdir. 
+                Bu karışım sayesinde hem altının değerini korur hem de takı olarak kullanımda çok daha dayanıklı olur.
+              </p>
+              <p>
+                <strong>En önemli avantajı ise işçilik maliyetlerinin düşük olmasıdır. </strong> 
+                22 ayar veya 24 ayar altınlara göre çok daha uygun fiyatlarla aynı gramajda altın alabilirsiniz. 
+                Yani aynı para ile daha fazla altın sahibi olursunuz.
+              </p>
+              <p>
+                Altın Anne olarak, müşterilerimize en değerli yatırımı en uygun fiyatlarla sunuyoruz. 
+                14 ayar altın ile hem yatırım değerinizi koruyor hem de estetik bir takıya sahip oluyorsunuz.
+              </p>
+            </div>
+          </div>
+
           <div className="about-intro">
             <h2>14'lük Nedir?</h2>
             <p>
@@ -53,6 +76,7 @@ const About: React.FC = () => {
                 </div>
                 <h3>14'lük Altın</h3>
                 <ul>
+                  <li>Özel tasarım yatırım hediyelik mücevherat eşyası</li>
                   <li>Düşük gramaj seçenekleri</li>
                   <li>Uygun fiyatlı</li>
                   <li>Hem yatırım hem takı</li>
