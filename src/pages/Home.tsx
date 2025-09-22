@@ -351,7 +351,7 @@ const Home: React.FC = () => {
               </div>
               
               <div className="product-info">
-                <h3 className="product-name">Kalp 14'lük</h3>
+                <h3 className="product-name">Kalp 14'lük (Yakında)</h3>
                 <p className="product-description">Hediyelik ve duygusal değer. Özel günlerde anlamlı hediye.</p>
                 
                 <div className="product-features">
@@ -415,10 +415,9 @@ const Home: React.FC = () => {
                 </div>
 
                 <div className="product-actions">
-                  <Link to="/altin-anne" className="buy-button">
-                    <ShoppingBag size={20} />
-                    <span>Satın Al</span>
-                  </Link>
+                  <div className="coming-soon-button">
+                    <span>Yakında</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -433,7 +432,7 @@ const Home: React.FC = () => {
               </div>
               
               <div className="product-info">
-                <h3 className="product-name">Yonca 14'lük</h3>
+                <h3 className="product-name">Yonca 14'lük (Yakında)</h3>
                 <p className="product-description">Şans ve bereket sembolü. Özel tasarım ile şansınızı artırın.</p>
                 
                 <div className="product-features">
@@ -497,10 +496,9 @@ const Home: React.FC = () => {
                 </div>
 
                 <div className="product-actions">
-                  <Link to="/altin-anne" className="buy-button">
-                    <ShoppingBag size={20} />
-                    <span>Satın Al</span>
-                  </Link>
+                  <div className="coming-soon-button">
+                    <span>Yakında</span>
+                  </div>
                 </div>
               </div>
             </div>

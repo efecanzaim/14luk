@@ -18,7 +18,7 @@ const Products: React.FC = () => {
   const products: Product[] = [
     {
       id: '1',
-      name: 'Dikdörtgen 14\'lük',
+      name: 'Klasik 14\'lük',
       type: 'square',
       description: 'Klasik tasarım, zamansız güzellik. Geleneksel altın yatırımına modern bir alternatif.',
       weights: ['1g', '2.5g', '5g', '10g'],
@@ -38,7 +38,7 @@ const Products: React.FC = () => {
     },
     {
       id: '3',
-      name: 'Kalp 14\'lük',
+      name: 'Kalp 14\'lük (Yakında)',
       type: 'heart',
       description: 'Hediyelik ve duygusal değer. Özel günlerde anlamlı hediye.',
       weights: ['1g', '2.5g', '5g', '10g'],
@@ -48,7 +48,7 @@ const Products: React.FC = () => {
     },
     {
       id: '4',
-      name: 'Yonca 14\'lük',
+      name: 'Yonca 14\'lük (Yakında)',
       type: 'clover',
       description: 'Şans ve bereket sembolü. Özel tasarım ile şansınızı artırın.',
       weights: ['1g', '2.5g', '5g', '10g'],
@@ -120,10 +120,16 @@ const Products: React.FC = () => {
                   </div>
 
                   <div className="product-actions">
-                    <Link to="/altin-anne" className="buy-button">
-                      <ShoppingBag size={20} />
-                      <span>Satın Al</span>
-                    </Link>
+                    {product.type === 'heart' || product.type === 'clover' ? (
+                      <div className="coming-soon-button">
+                        <span>Yakında</span>
+                      </div>
+                    ) : (
+                      <Link to="/altin-anne" className="buy-button">
+                        <ShoppingBag size={20} />
+                        <span>Satın Al</span>
+                      </Link>
+                    )}
                   </div>
                 </div>
               </div>
