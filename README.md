@@ -7,7 +7,7 @@
 ## 🚀 Live Demo
 
 **Website:** [https://efecanzaim.github.io/14luk/](https://efecanzaim.github.io/14luk/)
-z
+
 ## 🛠️ Technologies Used
 
 ### Frontend Framework & Libraries
