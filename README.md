@@ -1,4 +1,4 @@
-# 14K Gold - E-commerce Web Application
+# 14'lük - E-commerce Web Application
 
 ## 📋 Project Overview
 
