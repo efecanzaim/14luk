@@ -17,12 +17,9 @@
     <noscript>Bu uygulamayı çalıştırmak için JavaScript'i etkinleştirmeniz gerekiyor.</noscript>
     <div id="root"></div>
     <script>
-      // GitHub Pages için SPA routing düzeltmesi
-      // Bu script, 404 sayfasında da React uygulamasını yükler
       sessionStorage.redirect = location.href;
     </script>
     <script type="text/javascript">
-      // React uygulamasını yeniden yönlendir
       window.location.replace(window.location.origin + window.location.pathname + '#/');
     </script>
   </body>

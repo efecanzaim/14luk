@@ -15,7 +15,7 @@ const Redirect: React.FC = () => {
           hasRedirectedRef.current = true;
           setHasRedirected(true);
           window.open('https://altinanne.com', '_blank');
-          clearInterval(timer); // Timer'ı manuel olarak durdur
+          clearInterval(timer);
           return 0;
         }
         return prev - 1;
@@ -23,7 +23,7 @@ const Redirect: React.FC = () => {
     }, 1000);
 
     return () => clearInterval(timer);
-  }, []); // Boş dependency array - sadece component mount olduğunda çalışsın
+  }, []); // empty dependency array
 
   return (
     <div className="redirect">

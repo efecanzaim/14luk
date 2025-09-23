@@ -14,7 +14,7 @@ import Dogrulama from './pages/Dogrulama';
 import Redirect from './pages/Redirect';
 import './App.css';
 
-// Navigation data
+// nav data
 const navItems = [
   { label: 'ANA SAYFA', href: '/', ariaLabel: 'Ana sayfaya git', icon: <House size={20} strokeWidth={2.5} /> },
   { label: 'ÜRÜNLER', href: '/urunler', ariaLabel: 'Ürünleri görüntüle' },
@@ -32,16 +32,16 @@ function AppContent() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
-  // Sayfa değiştiğinde en üste scroll
+  // scroll control
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
-  // Scroll event listener
+  // scroll listener
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      setIsScrolled(scrollTop > 50); // 50px scroll sonrası renk gelsin
+      setIsScrolled(scrollTop > 50);
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });

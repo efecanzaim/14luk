@@ -14,7 +14,7 @@ const Dogrulama: React.FC = () => {
       setSerialNumber(certificateNumber);
       setVerificationStatus('loading');
       
-      // Simüle edilmiş doğrulama - belirli sertifika numaraları doğru kabul edilir
+      // simulate verification
       const validCertificates = ['123456', '123457', '123458'];
       const isSuccess = validCertificates.includes(certificateNumber.toUpperCase());
       
@@ -27,7 +27,7 @@ const Dogrulama: React.FC = () => {
   const handleCertificateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     
-    // Eğer alan boşsa, görseli sıfırla
+    // if field is empty, reset image
     if (value.trim() === '') {
       setSerialNumber('');
       setVerificationStatus('idle');
