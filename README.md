@@ -191,13 +191,11 @@ The project is automatically deployed on **GitHub Pages**. Every push to the `ma
 - [ ] PWA (Progressive Web App) support
 - [ ] Multi-language support
 - [ ] Advanced filtering and search
-- [ ] User authentication
-- [ ] Payment gateway integration
 - [ ] Admin panel
 
 ## 👨‍💻 Developer
 
-**Efe Can Zaim**
+**Efecan Zaim**
 - GitHub: [@efecanzaim](https://github.com/efecanzaim)
 - LinkedIn: [Efecan Zaim](https://linkedin.com/in/efecanzaim)
 
