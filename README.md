@@ -6,7 +6,7 @@
 
 ## 🚀 Live Demo
 
-**Website:** [https://efecanzaim.github.io/14luk/](https://efecanzaim.github.io/14luk/)
+**Website:** [http://bit.ly/48AW42u](http://bit.ly/48AW42u)
 
 ## 🛠️ Technologies Used
 
