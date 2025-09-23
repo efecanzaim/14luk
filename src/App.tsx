@@ -9,6 +9,8 @@ import Products from './pages/Products';
 import Trust from './pages/Trust';
 import Press from './pages/Press';
 import FAQ from './pages/FAQ';
+import TalepFormu from './pages/TalepFormu';
+import Dogrulama from './pages/Dogrulama';
 import Redirect from './pages/Redirect';
 import './App.css';
 
@@ -20,6 +22,8 @@ const navItems = [
   { label: 'GÜVEN & KALİTE', href: '/guven-ve-kalite', ariaLabel: 'Güven ve kalite bilgileri' },
   { label: 'BASINDA BİZ', href: '/basinda-biz', ariaLabel: 'Basında çıkan haberler' },
   { label: 'SSS', href: '/sik-sorulan-sorular', ariaLabel: 'Sık sorulan sorular' },
+  { label: 'TALEP FORMU', href: '/talep-formu', ariaLabel: 'Talep formu' },
+  { label: 'DOĞRULAMA', href: '/dogrulama', ariaLabel: 'Doğrulama' },
   { label: 'SATIN AL', href: '/altin-anne', ariaLabel: 'Satın al', icon: <ShoppingCart size={20} strokeWidth={2.5} /> }
 ];
 
@@ -98,6 +102,8 @@ function AppContent() {
           <Route path="/guven-ve-kalite" element={<Trust />} />
           <Route path="/basinda-biz" element={<Press />} />
           <Route path="/sik-sorulan-sorular" element={<FAQ />} />
+          <Route path="/talep-formu" element={<TalepFormu />} />
+          <Route path="/dogrulama" element={<Dogrulama />} />
           <Route path="/altin-anne" element={<Redirect />} />
         </Routes>
       </main>

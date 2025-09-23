@@ -1,0 +1,214 @@
+.talep-formu {
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.talep-formu-hero {
+  background: linear-gradient(135deg, #041234 0%, #0a1f4a 100%);
+  padding: 120px 0 80px;
+  color: white;
+  text-align: center;
+}
+
+.talep-formu-hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.talep-formu-hero-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-family: 'Geist', sans-serif;
+}
+
+.talep-formu-hero-subtitle {
+  font-size: 20px;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Form Section */
+.talep-formu-content {
+  padding: 80px 0;
+  background: #f8fffe;
+}
+
+.talep-formu-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.form-card {
+  background: white;
+  padding: 50px;
+  border-radius: 25px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e0f0e8;
+}
+
+.form-card h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #041234;
+  margin-bottom: 20px;
+  font-family: 'Geist', sans-serif;
+  text-align: center;
+}
+
+.form-card p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 40px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.talep-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #041234;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 15px 20px;
+  border: 2px solid #e0f0e8;
+  border-radius: 15px;
+  font-size: 16px;
+  font-family: 'Geist', sans-serif;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #041234;
+  box-shadow: 0 0 0 3px rgba(4, 18, 52, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit-button {
+  background: #041234;
+  color: white;
+  padding: 18px 40px;
+  border: none;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'Geist', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.submit-button:hover:not(:disabled) {
+  background: #ffb600;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 182, 0, 0.3);
+}
+
+.submit-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.success-message {
+  background: #d4edda;
+  color: #155724;
+  padding: 15px 20px;
+  border-radius: 10px;
+  border: 1px solid #c3e6cb;
+  margin-top: 20px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.error-message {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 15px 20px;
+  border-radius: 10px;
+  border: 1px solid #f5c6cb;
+  margin-top: 20px;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .talep-formu-hero {
+    padding: 80px 0 60px;
+  }
+
+  .talep-formu-hero-title {
+    font-size: 36px;
+  }
+
+  .talep-formu-hero-subtitle {
+    font-size: 18px;
+  }
+
+  .talep-formu-content {
+    padding: 60px 0;
+  }
+
+  .form-card {
+    padding: 30px 20px;
+  }
+
+  .form-card h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .talep-formu-hero-title {
+    font-size: 28px;
+  }
+
+  .talep-formu-hero-subtitle {
+    font-size: 16px;
+  }
+
+  .form-card {
+    padding: 20px 15px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+
+  .submit-button {
+    padding: 15px 30px;
+    font-size: 16px;
+  }
+}
