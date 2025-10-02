@@ -99,15 +99,9 @@ const Home: React.FC = () => {
                 <h3 className="main-headline">
                   Hem yatırım yapın hem de şıklığınızı tamamlayın!
                 </h3>
-                <p className="product-description">
-                  Yatırımın değerini, şıklığınızla buluşturun. Kare, yuvarlak ve kalp formlarında tasarlanan koleksiyonumuz; bileklik ve kolye olarak kullanılabilecek zamansız parçalar sunuyor.
-                </p>
-                <p className="product-specs">
-                  1gr, 2.5gr, 5gr, 10gr, 20gr, 50gr, 100gr seçenekleri ile her bütçeye uygun, 14 ayar yüksek kaliteli özel tasarım yatırım hediyelik mücevherat eşyası.
-                </p>
-                <p className="product-tagline">
-                  Hem yatırım hem de stilinizi tamamlayan özel bir koleksiyon.
-                </p>
+                <div className="product-full-description">
+                  Yatırımın değerini, şıklığınızla buluşturun. Kare, yuvarlak ve kalp formlarında tasarlanan koleksiyonumuz; bileklik ve kolye olarak kullanılabilecek zamansız parçalar sunuyor. 1gr, 2.5gr, 5gr, 10gr, 20gr, 50gr, 100gr seçenekleri ile her bütçeye uygun, 14 ayar yüksek kaliteli özel tasarım yatırım hediyelik mücevherat eşyası. Hem yatırım hem de stilinizi tamamlayan özel bir koleksiyon.
+                </div>
               </div>
             </div>
 
