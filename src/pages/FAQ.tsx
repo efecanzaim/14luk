@@ -14,8 +14,8 @@ const FAQ: React.FC = () => {
   const faqItems: FAQItem[] = [
     {
       id: 1,
-      question: "14'lük ile gram altın arasındaki fark nedir?",
-      answer: "14'lük altın, gram altına alternatif olarak tasarlanmış özel bir konsepttir. Gram altının yüksek maliyeti ve ziynet eşyalarının yatırım değeri eksikliği arasında köprü kuran, hem estetik hem de ekonomik değer taşıyan ürünlerdir. Düşük gramaj seçenekleri ile her keseye uygun fiyatlar sunar."
+      question: "14'lük nedir?",
+      answer: "14'lük, 585 milyem (14 ayar) altından üretilmiş, hem yatırım hem takı hem de hediye olarak kullanılabilen bir altın ürünüdür. Daha düşük bütçelerle altına erişim sağlayarak küçük yatırımcıya da imkân sunar."
     },
     {
       id: 2,
@@ -25,26 +25,61 @@ const FAQ: React.FC = () => {
     {
       id: 3,
       question: "Hangi gramajlarda mevcut?",
-      answer: "14'lük altın ürünlerimiz 0.5g, 1g, 1.5g, 2g, 2.5g ve 3g gramaj seçeneklerinde mevcuttur. Bu çeşitlilik sayesinde her bütçeye uygun seçenekler sunuyoruz."
+      answer: "14'lük altın ürünlerimiz 1g, 2.5g, 5g, 10g gramaj seçeneklerinde mevcuttur. Bu çeşitlilik sayesinde her bütçeye uygun seçenekler sunuyoruz."
     },
     {
       id: 4,
-      question: "Nereden satın alabilirim?",
-      answer: "14'lük altın ürünlerimizi resmi satış kanalımız olan Altın Anne'den güvenle satın alabilirsiniz. Altın Anne, DEMAŞ A.Ş.'nin e-ticaret markası olarak güvenilir alışveriş deneyimi sunmaktadır."
+      question: "14'lük ile gram altın arasındaki fark nedir?",
+      answer: "14'lük altın, gram altına alternatif olarak tasarlanmış özel bir konsepttir. Gram altının yüksek maliyeti ve ziynet eşyalarının yatırım değeri eksikliği arasında köprü kuran, hem estetik hem de ekonomik değer taşıyan ürünlerdir. Düşük gramaj seçenekleri ile her keseye uygun fiyatlar sunar."
     },
     {
       id: 5,
-      question: "Kargo ve sigorta süreci nasıl işliyor?",
-      answer: "Tüm gönderilerimiz sigortalı kargo ile güvenle taşınır. Özel ambalajlama ile ürünleriniz korunur ve kimlik kontrolü ile güvenli teslimat yapılır. Kargo süreci genellikle 1-3 iş günü içerisinde tamamlanır."
-    },
-    {
-      id: 6,
       question: "Altının ayarı nedir?",
       answer: "14'lük altın ürünlerimiz 14 ayar altındır. Bu, altının %58.5 oranında saf altın içerdiği anlamına gelir. Bu ayar, hem dayanıklılık hem de değer açısından optimal bir seçimdir."
     },
     {
+      id: 6,
+      question: "14 ayar ürün düğünde takı olarak verilir mi?",
+      answer: "Evet. Altın Anne 14'lük ürünleri, şık tasarımı ve sertifikalı güvenli ambalajı sayesinde düğünlerde ve özel günlerde hediye olarak gönül rahatlığıyla takılabilir."
+    },
+    {
       id: 7,
-      question: "DEMAŞ A.Ş. kimdir?",
+      question: "14 ayar altını kuyumcular geri alır mı?",
+      answer: "Evet. Altın Anne iş birliği yapılan kuyumcular, 14 ayar ürünleri geri alım sistemine dahil eder. Ayrıca e-ticaret kanalı üzerinden de geri alım süreci şeffaf şekilde işletilir."
+    },
+    {
+      id: 8,
+      question: "14 ayar altın değer kaybettirir mi?",
+      answer: "Hayır. 14 ayar altın, içindeki has altın miktarına göre fiyatlanır. Altın fiyatı yükseldiğinde 14 ayar altının da değeri yükselir. Altın Anne markası altında satılan ürünler sertifikalı olduğu için değer kaybı riski yoktur."
+    },
+    {
+      id: 9,
+      question: "Satarken zarar eder miyim?",
+      answer: "14'lük ürünler, Altın Anne'nin geri alım garantisi kapsamında şeffaf fiyat politikası ile geri alınır. QR kod üzerinden anlık geri alım fiyatını görebilir, ürünü yetkili kanallarda kolayca nakde çevirebilirsiniz."
+    },
+    {
+      id: 10,
+      question: "Nereden satın alabilirim?",
+      answer: "14'lük altın ürünlerimizi resmi satış kanalımız olan Altın Anne'den ve anlaşmalı tüm kuyumculardan güvenle satın alabilirsiniz."
+    },
+    {
+      id: 11,
+      question: "Ambalaj güvenilir mi?",
+      answer: "Evet. Tüm ürünler QR kodlu, sertifikalı, mühürlü ambalaj ile sunulur. Ambalaj açıldığında belli olur ve ürünü kolayca doğrulamanızı sağlar. Bu sistem, sahte ya da düşük ayarlı ürün riskini tamamen ortadan kaldırır."
+    },
+    {
+      id: 12,
+      question: "QR kod ne işe yarar?",
+      answer: "QR kodu okutarak: • Ürünün doğruluğunu ve ayarını görebilirsiniz, • Sertifika bilgilerini kontrol edebilirsiniz, • Güncel geri alım fiyatını öğrenebilirsiniz."
+    },
+    {
+      id: 13,
+      question: "Kargo ve sigorta süreci nasıl işliyor?",
+      answer: "Tüm gönderilerimiz sigortalı kargo ile güvenle taşınır. Özel ambalajlama ile ürünleriniz korunur ve kimlik kontrolü ile güvenli teslimat yapılır. Kargo süreci genellikle 1-3 iş günü içerisinde tamamlanır."
+    },
+    {
+      id: 14,
+      question: "Altın Anne kimdir?",
       answer: "DEMAŞ A.Ş., Borsa İstanbul üyesi olan köklü bir altın firmasıdır. Sektörde güvenilirliği ve kalitesi ile tanınan firma, 14'lük altın konseptini geliştirerek sektöre yenilik getirmiştir."
     }
   ];
