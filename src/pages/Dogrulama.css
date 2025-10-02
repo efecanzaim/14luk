@@ -33,8 +33,8 @@
 
 /* Content Section */
 .dogrulama-content {
-  padding: 80px 0;
-  background: #f8fffe;
+  padding: 40px 0;
+  background: white;
 }
 
 .dogrulama-container {
@@ -70,7 +70,7 @@
 
 .dogrulama-methods {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: 1fr 1fr;
   gap: 30px;
   margin-bottom: 50px;
 }
@@ -81,10 +81,12 @@
   border-radius: 20px;
   border: 1px solid #e0f0e8;
   transition: all 0.3s ease;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
 }
 
 .method-card:hover {
-  transform: translateY(-5px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
@@ -159,12 +161,16 @@
   gap: 15px;
 }
 
-.product-image {
+.dogrulama-product-image {
   position: relative;
   width: 300px;
   height: 300px;
   border-radius: 15px;
   overflow: hidden;
+  background: #041234;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .image-placeholder {
@@ -181,16 +187,16 @@
   text-align: center;
 }
 
-.product-photo {
+.dogrulama-product-photo {
   position: relative;
   width: 100%;
   height: 100%;
 }
 
-.product-photo img {
-  width: 35vh;
-  height: 35vh;
-  object-fit: cover;
+.dogrulama-product-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
   transition: all 0.5s ease;
   position: absolute;
   top: 50%;
@@ -198,7 +204,7 @@
   transform: translate(-50%, -50%);
 }
 
-.product-photo.loading img {
+.dogrulama-product-photo.loading img {
   filter: blur(5px);
   animation: pulse 1.5s ease-in-out infinite;
 }
@@ -209,16 +215,17 @@
   100% { transform: translate(-50%, -50%) scale(1); }
 }
 
-.product-photo.blurred img {
-  filter: blur(5px);
+.dogrulama-product-photo.blurred img {
+  filter: blur(2px);
+  opacity: 0.7;
 }
 
-.product-photo.success img {
+.dogrulama-product-photo.success img {
   filter: none;
   animation: successReveal 0.8s ease-out;
 }
 
-.product-photo.error img {
+.dogrulama-product-photo.error img {
   filter: blur(5px);
   animation: errorShake 0.5s ease-in-out;
 }
@@ -326,8 +333,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 35vh;
-  height: 35vh;
+  width: 100%;
+  height: 100%;
   background: rgba(0, 0, 0, 0.7);
   display: flex;
   flex-direction: column;
@@ -335,9 +342,6 @@
   justify-content: center;
   z-index: 4;
   border-radius: 15px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .loading-spinner {
@@ -500,6 +504,78 @@
 .contact-item strong {
   color: #041234;
   font-weight: 600;
+}
+
+/* Altın Fiyatları Section */
+.altin-fiyatlari-section {
+  padding: 30px 0;
+  background: white;
+}
+
+.altin-fiyatlari-card {
+  background: white;
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e0f0e8;
+}
+
+.altin-fiyatlari-card h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #ffb600;
+  margin-bottom: 20px;
+  font-family: 'Geist', sans-serif;
+  text-align: center;
+}
+
+.fiyat-tablosu {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tablo-baslik {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 15px;
+  padding: 10px 0;
+  border-bottom: 2px solid #e0f0e8;
+  font-weight: 600;
+  color: #041234;
+  font-size: 14px;
+}
+
+.tablo-satir {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 15px;
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 12px;
+  color: #333;
+}
+
+.tablo-satir:hover {
+  background: #f8fffe;
+}
+
+.urun-tipi {
+  font-weight: 600;
+  color: #041234;
+}
+
+.alis, .satis {
+  text-align: right;
+  font-family: 'Courier New', monospace;
+}
+
+.fark {
+  text-align: right;
+  font-weight: 600;
+}
+
+.fark.artis {
+  color: #28a745;
 }
 
 /* Mobile Styles */

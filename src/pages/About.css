@@ -272,11 +272,14 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 50px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
 }
 
 .company-info {
   background: white;
-  padding: 40px 30px;
+  padding: 50px 40px;
   border-radius: 20px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
 }

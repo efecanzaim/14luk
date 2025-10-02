@@ -20,14 +20,14 @@ const Trust: React.FC = () => {
       <section className="gold-quality">
         <div className="trust-container">
           <div className="quality-content">
-            <h2>585 Ayar Altın Kalitesi</h2>
+            <h2>14 Ayar Altın Kalitesi</h2>
             <div className="quality-grid">
               <div className="quality-card">
                 <div className="quality-icon">
                   <Award size={50} />
                 </div>
                 <h3>Güvenilir Altın</h3>
-                <p>585 ayar altın ile yüksek kalite standartları</p>
+                <p>14 ayar altın ile yüksek kalite standartları</p>
               </div>
               <div className="quality-card">
                 <div className="quality-icon">

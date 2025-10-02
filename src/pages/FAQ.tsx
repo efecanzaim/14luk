@@ -20,7 +20,7 @@ const FAQ: React.FC = () => {
     {
       id: 2,
       question: "Bu ürün yatırım altını mı?",
-      answer: "14'lük altın, takı niteliğinde ama güvenilir altın olarak tasarlanmıştır. Hem yatırım değeri hem de estetik değer taşır. 585 ayar altın kalitesinde olup, DEMAŞ A.Ş. güvencesiyle üretilmektedir. Geleneksel yatırım altınından farklı olarak, aynı zamanda takı olarak da kullanılabilir."
+      answer: "14'lük altın, takı niteliğinde ama güvenilir altın olarak tasarlanmıştır. Hem yatırım değeri hem de estetik değer taşır. 14 ayar altın kalitesinde olup, Altın Anne güvencesiyle üretilmektedir. Geleneksel yatırım altınından farklı olarak, aynı zamanda takı olarak da kullanılabilir."
     },
     {
       id: 3,
@@ -40,7 +40,7 @@ const FAQ: React.FC = () => {
     {
       id: 6,
       question: "Altının ayarı nedir?",
-      answer: "14'lük altın ürünlerimiz 585 ayar altındır. Bu, altının %58.5 oranında saf altın içerdiği anlamına gelir. Bu ayar, hem dayanıklılık hem de değer açısından optimal bir seçimdir."
+      answer: "14'lük altın ürünlerimiz 14 ayar altındır. Bu, altının %58.5 oranında saf altın içerdiği anlamına gelir. Bu ayar, hem dayanıklılık hem de değer açısından optimal bir seçimdir."
     },
     {
       id: 7,

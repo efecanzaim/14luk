@@ -23,7 +23,7 @@ const Products: React.FC = () => {
       description: 'Klasik tasarım, zamansız güzellik. Geleneksel altın yatırımına modern bir alternatif.',
       weights: ['1g', '2.5g', '5g', '10g'],
       price: 'Uygun fiyatlar',
-      features: ['585 ayar altın', 'Klasik tasarım', 'Yatırım değeri', 'Hediyelik uygun'],
+      features: ['14 ayar altın', 'Klasik tasarım', 'Yatırım değeri', 'Hediyelik uygun'],
       image: `${process.env.PUBLIC_URL}/14luk-kare.png`
     },
     {
@@ -33,7 +33,7 @@ const Products: React.FC = () => {
       description: 'Ziynet benzeri şık görünüm. Estetik ve değerli, her duruma uygun.',
       weights: ['1g', '2.5g', '5g', '10g'],
       price: 'Uygun fiyatlar',
-      features: ['585 ayar altın', 'Şık tasarım', 'Ziynet benzeri', 'Çok amaçlı kullanım'],
+      features: ['14 ayar altın', 'Şık tasarım', 'Ziynet benzeri', 'Çok amaçlı kullanım'],
       image: `${process.env.PUBLIC_URL}/14luk-yuvarlak.png`
     },
     {
@@ -43,7 +43,7 @@ const Products: React.FC = () => {
       description: 'Hediyelik ve duygusal değer. Özel günlerde anlamlı hediye.',
       weights: ['1g', '2.5g', '5g', '10g'],
       price: 'Uygun fiyatlar',
-      features: ['585 ayar altın', 'Kalp tasarım', 'Hediyelik uygun', 'Duygusal değer'],
+      features: ['14 ayar altın', 'Kalp tasarım', 'Hediyelik uygun', 'Duygusal değer'],
       image: `${process.env.PUBLIC_URL}/14luk-kalp.png`
     },
     {
@@ -53,7 +53,7 @@ const Products: React.FC = () => {
       description: 'Şans ve bereket sembolü. Özel tasarım ile şansınızı artırın.',
       weights: ['1g', '2.5g', '5g', '10g'],
       price: 'Uygun fiyatlar',
-      features: ['585 ayar altın', 'Yonca tasarım', 'Şans sembolü', 'Özel koleksiyon'],
+      features: ['14 ayar altın', 'Yonca tasarım', 'Şans sembolü', 'Özel koleksiyon'],
       image: `${process.env.PUBLIC_URL}/14luk-kare.png`
     }
   ];

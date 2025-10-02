@@ -96,6 +96,8 @@
   gap: 12px;
   background: transparent !important;
   padding: 0 !important;
+  border: none !important;
+  outline: none !important;
 }
 
 .contact-item {
@@ -103,6 +105,7 @@
   align-items: flex-start;
   gap: 10px;
   font-size: 14px;
+  color: white !important;
   opacity: 0.9;
 }
 

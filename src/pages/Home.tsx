@@ -58,7 +58,7 @@ const Home: React.FC = () => {
               </div>
               <div className="hero-info">
                 <p className="hero-info-text">
-                  <strong>Altın Anne güvencesiyle</strong> 585 ayar saf altın kalitesinde <strong>KV GOLD</strong> tarafından üretilen 14'lük koleksiyonumuz, 
+                  <strong>Altın Anne güvencesiyle</strong> 14 ayar saf altın kalitesinde <strong>KV GOLD</strong> tarafından üretilen 14'lük koleksiyonumuz, 
                   yatırım değerinizi korurken şıklığınızı da tamamlıyor.
                   <span className="highlight-text"> Kare, yuvarlak, kalp ve yonca</span> formlarında, 
                   <span className="highlight-text"> 1gr'den 100gr'ye</span> kadar geniş gramaj yelpazesi ile 
@@ -103,7 +103,7 @@ const Home: React.FC = () => {
                   Yatırımın değerini, şıklığınızla buluşturun. Kare, yuvarlak ve kalp formlarında tasarlanan koleksiyonumuz; bileklik ve kolye olarak kullanılabilecek zamansız parçalar sunuyor.
                 </p>
                 <p className="product-specs">
-                  1gr, 2.5gr, 5gr, 10gr, 20gr, 50gr, 100gr seçenekleri ile her bütçeye uygun, 585 ayar yüksek kaliteli özel tasarım yatırım hediyelik mücevherat eşyası.
+                  1gr, 2.5gr, 5gr, 10gr, 20gr, 50gr, 100gr seçenekleri ile her bütçeye uygun, 14 ayar yüksek kaliteli özel tasarım yatırım hediyelik mücevherat eşyası.
                 </p>
                 <p className="product-tagline">
                   Hem yatırım hem de stilinizi tamamlayan özel bir koleksiyon.
@@ -134,7 +134,7 @@ const Home: React.FC = () => {
               >
                 <Card style={{ backgroundColor: '#ffb600', color: '#041234', padding: 0, overflow: 'hidden' }}>
                   <img 
-                    src={`${process.env.PUBLIC_URL}/14luk.png`} 
+                    src={`${process.env.PUBLIC_URL}/14lukklasik.png`} 
                     alt="14'lük Altın - Değerli Ama Uygun" 
                     style={{ 
                       width: '100%', 
@@ -146,7 +146,7 @@ const Home: React.FC = () => {
                 </Card>
                 <Card style={{ backgroundColor: '#041234', color: '#fff', padding: 0, overflow: 'hidden' }}>
                   <img 
-                    src={`${process.env.PUBLIC_URL}/14luk.png`} 
+                    src={`${process.env.PUBLIC_URL}/14lukyuvarlak.png`} 
                     alt="14'lük Altın - DEMAŞ Güvencesi" 
                     style={{ 
                       width: '100%', 
@@ -158,8 +158,20 @@ const Home: React.FC = () => {
                 </Card>
                 <Card style={{ backgroundColor: '#1a2d5c', color: '#fff', padding: 0, overflow: 'hidden' }}>
                   <img 
-                    src={`${process.env.PUBLIC_URL}/14luk.png`} 
-                    alt="14'lük Altın - 585 Ayar Altın" 
+                    src={`${process.env.PUBLIC_URL}/14lukkalp.png`} 
+                    alt="14'lük Altın - 14 Ayar Altın" 
+                    style={{ 
+                      width: '100%', 
+                      height: '100%', 
+                      objectFit: 'cover',
+                      display: 'block'
+                    }} 
+                  />
+                </Card>
+                <Card style={{ backgroundColor: '#1a2d5c', color: '#fff', padding: 0, overflow: 'hidden' }}>
+                  <img 
+                    src={`${process.env.PUBLIC_URL}/14lukyonca.png`} 
+                    alt="14'lük Altın - 14 Ayar Altın" 
                     style={{ 
                       width: '100%', 
                       height: '100%', 
@@ -197,7 +209,7 @@ const Home: React.FC = () => {
                   <ul>
                     <li>
                       <Star size={16} />
-                      <span>585 ayar altın</span>
+                      <span>14 ayar altın</span>
                     </li>
                     <li>
                       <Star size={16} />
@@ -277,7 +289,7 @@ const Home: React.FC = () => {
                   <ul>
                     <li>
                       <Star size={16} />
-                      <span>585 ayar altın</span>
+                      <span>14 ayar altın</span>
                     </li>
                     <li>
                       <Star size={16} />
@@ -359,7 +371,7 @@ const Home: React.FC = () => {
                   <ul>
                     <li>
                       <Star size={16} />
-                      <span>585 ayar altın</span>
+                      <span>14 ayar altın</span>
                     </li>
                     <li>
                       <Star size={16} />
@@ -440,7 +452,7 @@ const Home: React.FC = () => {
                   <ul>
                     <li>
                       <Star size={16} />
-                      <span>585 ayar altın</span>
+                      <span>14 ayar altın</span>
                     </li>
                     <li>
                       <Star size={16} />

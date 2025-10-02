@@ -108,7 +108,7 @@ const About: React.FC = () => {
                   <Shield size={40} />
                 </div>
                 <h3>Güvenilir Altın</h3>
-                <p>585 ayar altın ile yüksek kalite ve güvenilirlik</p>
+                <p>14 ayar altın ile yüksek kalite ve güvenilirlik</p>
               </div>
               <div className="feature-item">
                 <div className="feature-icon">

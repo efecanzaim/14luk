@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
             <h3 className="footer-title">14'lük Altın</h3>
             <p className="footer-description">
               Her keseye uygun, değerli ve güvenilir altın ürünleri. 
-              DEMAŞ A.Ş. güvencesiyle.
+              Altın Anne güvencesiyle.
             </p>
           </div>
 
