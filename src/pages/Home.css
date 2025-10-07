@@ -245,6 +245,95 @@
   font-size: 14px;
 }
 
+/* Altın Fiyatları Section */
+.altin-fiyatlari-section {
+  padding: 40px 0;
+  background: linear-gradient(135deg, #f8fffe 0%, #e8f5f0 100%);
+}
+
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.altin-fiyatlari-card {
+  background: white;
+  border-radius: 25px;
+  padding: 40px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e0f0e8;
+  text-align: center;
+}
+
+.altin-fiyatlari-card h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #041234;
+  margin-bottom: 20px;
+  font-family: 'Geist', sans-serif;
+}
+
+.timestamp {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+.fiyat-tablosu {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.tablo-baslik {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 10px;
+  padding: 20px 25px;
+  background: #f8f9fa;
+  color: #041234;
+  border: 2px solid #041234;
+  border-radius: 15px;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.tablo-satir {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 10px;
+  padding: 20px 25px;
+  background: #f8fffe;
+  border: 1px solid #e0f0e8;
+  border-radius: 15px;
+  font-size: 13px;
+  align-items: center;
+}
+
+.urun-tipi {
+  font-weight: 600;
+  color: #041234;
+  text-align: left;
+}
+
+.alis, .satis {
+  color: #666;
+  text-align: center;
+}
+
+.fark {
+  text-align: center;
+  font-weight: 600;
+}
+
+.fark.artis {
+  color: #28a745;
+}
+
 /* Features Section */
 .features {
   padding: 20px 0;
@@ -520,6 +609,29 @@
       padding: 0 15px !important;
     }
   }
+
+  .altin-fiyatlari-section {
+    padding: 30px 0;
+  }
+
+  .home-container {
+    padding: 0 15px;
+  }
+
+  .altin-fiyatlari-card {
+    padding: 30px 20px;
+  }
+
+  .altin-fiyatlari-card h2 {
+    font-size: 28px;
+  }
+
+  .tablo-baslik, .tablo-satir {
+    grid-template-columns: 1.2fr 0.9fr 0.9fr 0.9fr;
+    gap: 8px;
+    padding: 18px 20px;
+    font-size: 12px;
+  }
   
   .features-content {
     flex-direction: column !important;
@@ -625,6 +737,29 @@
     font-size: 20px;
     line-height: 1.3;
     margin-bottom: 12px;
+  }
+
+  .altin-fiyatlari-section {
+    padding: 25px 0;
+  }
+
+  .home-container {
+    padding: 0 10px;
+  }
+
+  .altin-fiyatlari-card {
+    padding: 25px 15px;
+  }
+
+  .altin-fiyatlari-card h2 {
+    font-size: 24px;
+  }
+
+  .tablo-baslik, .tablo-satir {
+    grid-template-columns: 1fr 0.8fr 0.8fr 0.8fr;
+    gap: 6px;
+    padding: 15px 18px;
+    font-size: 11px;
   }
   
   .product-full-description {

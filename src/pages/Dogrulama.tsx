@@ -4,15 +4,6 @@ import './Dogrulama.css';
 const Dogrulama: React.FC = () => {
   const [verificationStatus, setVerificationStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [serialNumber, setSerialNumber] = useState('');
-  const [currentDateTime, setCurrentDateTime] = useState(new Date());
-
-  React.useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentDateTime(new Date());
-    }, 1000);
-
-    return () => clearInterval(timer);
-  }, []);
 
   const handleCertificateSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -118,48 +109,6 @@ const Dogrulama: React.FC = () => {
                     )}
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Altın Fiyatları Section */}
-      <section className="altin-fiyatlari-section">
-        <div className="dogrulama-container">
-          <div className="altin-fiyatlari-card">
-            <h2>Altın Fiyatları</h2>
-            <div className="timestamp">
-              {currentDateTime.toLocaleDateString('tr-TR')} - {currentDateTime.toLocaleTimeString('tr-TR')}
-            </div>
-            
-            <div className="fiyat-tablosu">
-              <div className="tablo-baslik">
-                <div className="urun-tipi">Ürün Tipi</div>
-                <div className="alis">Alış</div>
-                <div className="satis">Satış</div>
-                <div className="fark">Fark</div>
-              </div>
-              
-              <div className="tablo-satir">
-                <div className="urun-tipi">HAS ALTIN</div>
-                <div className="alis">5.313,78</div>
-                <div className="satis">5.329,31</div>
-                <div className="fark artis">↑%0.38</div>
-              </div>
-              
-              <div className="tablo-satir">
-                <div className="urun-tipi">ONS</div>
-                <div className="alis">3.881,8</div>
-                <div className="satis">3.882,2</div>
-                <div className="fark artis">↑%0.47</div>
-              </div>
-              
-              <div className="tablo-satir">
-                <div className="urun-tipi">14'LÜK</div>
-                <div className="alis">4.850,00</div>
-                <div className="satis">4.950,00</div>
-                <div className="fark artis">↑%0.25</div>
               </div>
             </div>
           </div>

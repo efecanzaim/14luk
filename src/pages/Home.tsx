@@ -7,6 +7,7 @@ import './Home.css';
 
 const Home: React.FC = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const [currentDateTime, setCurrentDateTime] = useState(new Date());
 
   useEffect(() => {
     const checkMobile = () => {
@@ -17,6 +18,14 @@ const Home: React.FC = () => {
     window.addEventListener('resize', checkMobile);
     
     return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentDateTime(new Date());
+    }, 1000);
+
+    return () => clearInterval(timer);
   }, []);
 
   return (
@@ -64,6 +73,48 @@ const Home: React.FC = () => {
                   <span className="highlight-text"> 1gr'den 100gr'ye</span> kadar geniş gramaj yelpazesi ile 
                   her bütçeye uygun, özel tasarım yatırım hediyelik mücevherat eşyası.
                 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Altın Fiyatları Section */}
+      <section className="altin-fiyatlari-section">
+        <div className="home-container">
+          <div className="altin-fiyatlari-card">
+            <h2>Altın Fiyatları</h2>
+            <div className="timestamp">
+              {currentDateTime.toLocaleDateString('tr-TR')} - {currentDateTime.toLocaleTimeString('tr-TR')}
+            </div>
+            
+            <div className="fiyat-tablosu">
+              <div className="tablo-baslik">
+                <div className="urun-tipi">Ürün Tipi</div>
+                <div className="alis">Alış</div>
+                <div className="satis">Satış</div>
+                <div className="fark">Fark</div>
+              </div>
+              
+              <div className="tablo-satir">
+                <div className="urun-tipi">HAS ALTIN</div>
+                <div className="alis">5.313,78</div>
+                <div className="satis">5.329,31</div>
+                <div className="fark artis">↑%0.38</div>
+              </div>
+              
+              <div className="tablo-satir">
+                <div className="urun-tipi">14 AYAR</div>
+                <div className="alis">3.108,56</div>
+                <div className="satis">3.117,65</div>
+                <div className="fark artis">↑%0.29</div>
+              </div>
+              
+              <div className="tablo-satir">
+                <div className="urun-tipi">18 AYAR</div>
+                <div className="alis">3.996,72</div>
+                <div className="satis">4.008,45</div>
+                <div className="fark artis">↑%0.29</div>
               </div>
             </div>
           </div>
