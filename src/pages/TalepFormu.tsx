@@ -4,9 +4,16 @@ import './TalepFormu.css';
 const TalepFormu: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [isPrivacyAccepted, setIsPrivacyAccepted] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    
+    if (!isPrivacyAccepted) {
+      alert('Lütfen kişisel verilerin işlenmesi hakkındaki bilgilendirmeyi onaylayınız.');
+      return;
+    }
+    
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
@@ -96,10 +103,33 @@ const TalepFormu: React.FC = () => {
                 <textarea id="message" name="message" rows={5} required placeholder="Talebinizi detaylı olarak açıklayınız..."></textarea>
               </div>
               
+              <div className="privacy-checkbox">
+                <label className="checkbox-label">
+                  <input 
+                    type="checkbox" 
+                    checked={isPrivacyAccepted}
+                    onChange={(e) => setIsPrivacyAccepted(e.target.checked)}
+                    required
+                  />
+                  <span className="checkbox-text">
+                    Yukarıdaki alanlar üzerinden tarafımıza açıklayacağınız kişisel verileriniz Demaş Hediyelik Eşya Anonim Şirketi tarafından iletişim faaliyetlerinin yürütülmesi, talep / şikayetlerin takibi, iş süreçlerinin iyileştirilmesine yönelik önerilerin alınması ve değerlendirilmesi, mal / hizmet satış sonrası destek hizmetlerinin yürütülmesi, müşteri memnuniyetine yönelik aktivitelerin yürütülmesi, müşteri ilişkileri yönetimi süreçlerinin yürütülmesi amaçlarıyla işlenecektir. Ayrıntılı bilgiye{' '}
+                    <a 
+                      href="https://altinanne.com/iletisim-formu-aydinlatma-metni" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="privacy-link"
+                    >
+                      İletişim Formu Aydınlatma Metni
+                    </a>
+                    'nden ulaşabilirsiniz.
+                  </span>
+                </label>
+              </div>
+              
               <button 
                 type="submit" 
                 className="submit-button"
-                disabled={isSubmitting}
+                disabled={isSubmitting || !isPrivacyAccepted}
               >
                 {isSubmitting ? 'Gönderiliyor...' : 'Bayi Talebi Gönder'}
               </button>
@@ -115,16 +145,6 @@ const TalepFormu: React.FC = () => {
                   ❌ Form gönderilirken bir hata oluştu. Lütfen tekrar deneyin veya bizimle iletişime geçin.
                 </div>
               )}
-              
-              <div className="privacy-notice">
-                <h3>Kişisel Verilerin Korunması Hakkında Bilgilendirme</h3>
-                <p>
-                  Yukarıdaki alanlar üzerinden tarafımıza açıklayacağınız kişisel verileriniz Demaş Hediyelik Eşya Anonim Şirketi tarafından iletişim faaliyetlerinin yürütülmesi, talep / şikayetlerin takibi, iş süreçlerinin iyileştirilmesine yönelik önerilerin alınması ve değerlendirilmesi, mal / hizmet satış sonrası destek hizmetlerinin yürütülmesi, müşteri memnuniyetine yönelik aktivitelerin yürütülmesi, müşteri ilişkileri yönetimi süreçlerinin yürütülmesi amaçlarıyla işlenecektir. Ayrıntılı bilgiye İletişim Formu Aydınlatma Metni'nden ulaşabilirsiniz.
-                </p>
-                <p>
-                  Serbest alanlarda bizlerle paylaşacağınız kişisel verileriniz Demaş Hediyelik Eşya Anonim Şirketi tarafından aydınlatma metninde belirtilen amaçlar ile sınırlı olarak işlenmiş sayılacaktır. Özel nitelikli kişisel veri (ırk, etnik köken, siyasi düşünce, felsefi inanç, din, mezhep veya diğer inançlar, kılık ve kıyafet, dernek, vakıf ya da sendika üyeliği, sağlık, cinsel hayat, ceza mahkûmiyet ve güvenlik tedbirleriyle ilgili veriler ile biyometrik ve genetik veriler) ve üçüncü kişilere ait kişisel verilerin paylaşılmamasına özen gösterilmesini rica ederiz.
-                </p>
-              </div>
             </form>
           </div>
         </div>
