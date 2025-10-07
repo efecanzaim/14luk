@@ -15,7 +15,7 @@ const FAQ: React.FC = () => {
     {
       id: 1,
       question: "14'lük nedir?",
-      answer: "14'lük, 585 milyem (14 ayar) altından üretilmiş, hem yatırım hem takı hem de hediye olarak kullanılabilen bir altın ürünüdür. Daha düşük bütçelerle altına erişim sağlayarak küçük yatırımcıya da imkân sunar."
+      answer: "14'lük altın, geleneksel altın yatırımından farklı olarak tasarlanmış, 14 ayar saf altın içeren özel bir konsepttir. Bu ürünler, takı niteliğinde şık bir görünüme sahip olmasının yanı sıra, resmi damgalı, sertifikalı ve karekodlu yapısıyla güvenilir bir yatırım aracı olarak öne çıkar.\n\nİnsanımızın birikim alışkanlıkları ile hediye kültürümüz arasında köprü kurarak hem estetik hem de ekonomik değer sunar. Farklı gramajlı seçenekleri sayesinde herkesin kolaylıkla ulaşabileceği, bütçe dostu ama değerini koruyan bir alternatiftir.\n\nTürk toplumunun geleneksel tasarruf ve hediye kültürünü günümüz şartlarına uyarlayan 14'lük, günlük yaşamda takı olarak rahatlıkla kullanılabilecek şekilde tasarlanmıştır. Aynı zamanda özel günlerde sevdiklerine hediye edilebilecek anlamlı ve değerli bir seçenektir.\n\nŞık ve güvenli blister ambalajı, sahteciliğe karşı mühürlü yapısı ve açıldığında belli olan paketleme sistemiyle tam güven sağlar. Karekod doğrulaması sayesinde ürünün gramajı, ayarı ve orijinalliği kolayca kontrol edilebilir, şeffaf fiyatlandırması ile anlık fiyatları görüntüleyerek gönül rahatlığıyla tercih edilebilir.\n\nKısacası 14'lük, herkesin altına erişimini kolaylaştıran, güveni ve şıklığı bir arada sunan, yeni nesil özel konseptli bir üründür."
     },
     {
       id: 2,
@@ -70,7 +70,7 @@ const FAQ: React.FC = () => {
     {
       id: 12,
       question: "QR kod ne işe yarar?",
-      answer: "QR kodu okutarak: • Ürünün doğruluğunu ve ayarını görebilirsiniz, • Sertifika bilgilerini kontrol edebilirsiniz, • Güncel geri alım fiyatını öğrenebilirsiniz."
+      answer: "QR kodu okutarak:\n• Ürünün doğruluğunu ve ayarını görebilirsiniz,\n• Sertifika bilgilerini kontrol edebilirsiniz,\n• Güncel geri alım fiyatını öğrenebilirsiniz."
     },
     {
       id: 13,
