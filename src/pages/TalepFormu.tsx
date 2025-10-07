@@ -91,6 +91,7 @@ const TalepFormu: React.FC = () => {
                 <label htmlFor="subject">Konu *</label>
                 <select id="subject" name="subject" required>
                   <option value="">Konu seçiniz</option>
+                  <option value="bayilik-basvurusu">Bayilik Başvurusu</option>
                   <option value="ozel-gramaj">Özel Gramaj Talebi</option>
                   <option value="toplu-siparis">Toplu Sipariş</option>
                   <option value="ozel-tasarim">Özel Tasarım</option>
