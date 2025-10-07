@@ -122,6 +122,8 @@ const TalepFormu: React.FC = () => {
                       İletişim Formu Aydınlatma Metni
                     </a>
                     'nden ulaşabilirsiniz.
+                    <br /><br />
+                    Serbest alanlarda bizlerle paylaşacağınız kişisel verileriniz Demaş Hediyelik Eşya Anonim Şirketi tarafından aydınlatma metninde belirtilen amaçlar ile sınırlı olarak işlenmiş sayılacaktır. Özel nitelikli kişisel veri (ırk, etnik köken, siyasi düşünce, felsefi inanç, din, mezhep veya diğer inançlar, kılık ve kıyafet, dernek, vakıf ya da sendika üyeliği, sağlık, cinsel hayat, ceza mahkûmiyet ve güvenlik tedbirleriyle ilgili veriler ile biyometrik ve genetik veriler) ve üçüncü kişilere ait kişisel verilerin paylaşılmamasına özen gösterilmesini rica ederiz.
                   </span>
                 </label>
               </div>
