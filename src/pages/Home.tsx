@@ -41,7 +41,7 @@ const Home: React.FC = () => {
           <div className="hero-container">
             <div className="hero-content">
               <h1 className="hero-title">
-                14'lük Altın
+                14'lük
                 <span className="hero-subtitle">
                   Herkese, her keseye
                   <HandCoins className="hero-coins-icon" size={32} />
@@ -59,7 +59,7 @@ const Home: React.FC = () => {
               <div className="hero-info">
                 <p className="hero-info-text">
                   <strong>Altın Anne güvencesiyle</strong> 14 ayar saf altın kalitesinde <strong>KV GOLD</strong> tarafından üretilen 14'lük koleksiyonumuz, 
-                  yatırım değerinizi korurken şıklığınızı da tamamlıyor.
+                  birikim değerinizi korurken şıklığınızı da tamamlıyor.
                   <span className="highlight-text"> Kare, yuvarlak, kalp ve yonca</span> formlarında, 
                   <span className="highlight-text"> 1gr'den 100gr'ye</span> kadar geniş gramaj yelpazesi ile 
                   her bütçeye uygun, özel tasarım yatırım hediyelik mücevherat eşyası.
@@ -97,10 +97,10 @@ const Home: React.FC = () => {
             }}>
               <div className="features-text-container">
                 <h3 className="main-headline">
-                  Hem yatırım yapın hem de şıklığınızı tamamlayın!
+                  Hem birikim yapın hem de şıklığınızı tamamlayın!
                 </h3>
                 <div className="product-full-description">
-                  Yatırımın değerini, şıklığınızla buluşturun. Kare, yuvarlak ve kalp formlarında tasarlanan koleksiyonumuz; bileklik ve kolye olarak kullanılabilecek zamansız parçalar sunuyor. 1gr, 2.5gr, 5gr, 10gr, 20gr, 50gr, 100gr seçenekleri ile her bütçeye uygun, 14 ayar yüksek kaliteli özel tasarım yatırım hediyelik mücevherat eşyası. Hem yatırım hem de stilinizi tamamlayan özel bir koleksiyon.
+                  Birikim değerini, şıklığınızla buluşturun. Kare, yuvarlak ve kalp formlarında tasarlanan koleksiyonumuz; bileklik ve kolye olarak kullanılabilecek zamansız parçalar sunuyor. 1gr, 2.5gr, 5gr, 10gr, 20gr, 50gr, 100gr seçenekleri ile her bütçeye uygun, 14 ayar yüksek kaliteli özel tasarım birikim hediyelik mücevherat eşyası. Hem birikim hem de stilinizi tamamlayan özel bir koleksiyon.
                 </div>
               </div>
             </div>
@@ -129,7 +129,7 @@ const Home: React.FC = () => {
                 <Card style={{ backgroundColor: '#ffb600', color: '#041234', padding: 0, overflow: 'hidden' }}>
                   <img 
                     src={`${process.env.PUBLIC_URL}/14lukklasik.png`} 
-                    alt="14'lük Altın - Değerli Ama Uygun" 
+                    alt="14'lük - Değerli Ama Uygun" 
                     style={{ 
                       width: '100%', 
                       height: '100%', 
@@ -141,7 +141,7 @@ const Home: React.FC = () => {
                 <Card style={{ backgroundColor: '#041234', color: '#fff', padding: 0, overflow: 'hidden' }}>
                   <img 
                     src={`${process.env.PUBLIC_URL}/14lukyuvarlak.png`} 
-                    alt="14'lük Altın - DEMAŞ Güvencesi" 
+                    alt="14'lük - DEMAŞ Güvencesi" 
                     style={{ 
                       width: '100%', 
                       height: '100%', 
@@ -153,7 +153,7 @@ const Home: React.FC = () => {
                 <Card style={{ backgroundColor: '#1a2d5c', color: '#fff', padding: 0, overflow: 'hidden' }}>
                   <img 
                     src={`${process.env.PUBLIC_URL}/14lukkalp.png`} 
-                    alt="14'lük Altın - 14 Ayar Altın" 
+                    alt="14'lük - 14 Ayar Altın" 
                     style={{ 
                       width: '100%', 
                       height: '100%', 
@@ -165,7 +165,7 @@ const Home: React.FC = () => {
                 <Card style={{ backgroundColor: '#1a2d5c', color: '#fff', padding: 0, overflow: 'hidden' }}>
                   <img 
                     src={`${process.env.PUBLIC_URL}/14lukyonca.png`} 
-                    alt="14'lük Altın - 14 Ayar Altın" 
+                    alt="14'lük - 14 Ayar Altın" 
                     style={{ 
                       width: '100%', 
                       height: '100%', 
@@ -196,7 +196,7 @@ const Home: React.FC = () => {
               
               <div className="product-info">
                 <h3 className="product-name">Klasik 14'lük</h3>
-                <p className="product-description">Klasik tasarım, zamansız güzellik. Geleneksel altın yatırımına modern bir alternatif.</p>
+                <p className="product-description">Klasik tasarım, zamansız güzellik. Geleneksel altın birikimine modern bir alternatif.</p>
                 
                 <div className="product-features">
                   <h4>Özellikler:</h4>
@@ -211,7 +211,7 @@ const Home: React.FC = () => {
                     </li>
                     <li>
                       <Star size={16} />
-                      <span>Yatırım değeri</span>
+                      <span>Birikim değeri</span>
                     </li>
                     <li>
                       <Star size={16} />

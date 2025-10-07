@@ -57,7 +57,7 @@ const Trust: React.FC = () => {
               <p>
                 Borsa İstanbul üyesi olan DEMAŞ A.Ş., altın sektöründe 
                 köklü geçmişi ve güvenilirliği ile tanınan bir firmadır. 
-                14'lük altın konseptini geliştirerek sektöre yenilik getirmiştir.
+                14'lük konseptini geliştirerek sektöre yenilik getirmiştir.
               </p>
               <div className="demas-features">
                 <div className="demas-feature">

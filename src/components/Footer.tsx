@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
       <div className="footer-container">
         <div className="footer-content">
           <div className="footer-section">
-            <h3 className="footer-title">14'lük Altın</h3>
+            <h3 className="footer-title">14'lük</h3>
             <p className="footer-description">
               Her keseye uygun, değerli ve güvenilir altın ürünleri. 
               Altın Anne güvencesiyle.

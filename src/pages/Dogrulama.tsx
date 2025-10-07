@@ -61,7 +61,7 @@ const Dogrulama: React.FC = () => {
           <div className="dogrulama-card">
             <h2>Ürün Doğrulama Sistemi</h2>
             <p>
-              Altın Anne güvencesiyle üretilen 14'lük altın ürünlerimizin orijinallik ve kalite doğrulaması 
+              Altın Anne güvencesiyle üretilen 14'lük ürünlerimizin orijinallik ve kalite doğrulaması 
               için aşağıdaki bilgileri kullanabilirsiniz.
             </p>
             

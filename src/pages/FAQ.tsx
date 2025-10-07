@@ -15,27 +15,27 @@ const FAQ: React.FC = () => {
     {
       id: 1,
       question: "14'lük nedir?",
-      answer: "14'lük altın, geleneksel altın yatırımından farklı olarak tasarlanmış, 14 ayar saf altın içeren özel bir konsepttir. Bu ürünler, takı niteliğinde şık bir görünüme sahip olmasının yanı sıra, resmi damgalı, sertifikalı ve karekodlu yapısıyla güvenilir bir yatırım aracı olarak öne çıkar.\n\nİnsanımızın birikim alışkanlıkları ile hediye kültürümüz arasında köprü kurarak hem estetik hem de ekonomik değer sunar. Farklı gramajlı seçenekleri sayesinde herkesin kolaylıkla ulaşabileceği, bütçe dostu ama değerini koruyan bir alternatiftir.\n\nTürk toplumunun geleneksel tasarruf ve hediye kültürünü günümüz şartlarına uyarlayan 14'lük, günlük yaşamda takı olarak rahatlıkla kullanılabilecek şekilde tasarlanmıştır. Aynı zamanda özel günlerde sevdiklerine hediye edilebilecek anlamlı ve değerli bir seçenektir.\n\nŞık ve güvenli blister ambalajı, sahteciliğe karşı mühürlü yapısı ve açıldığında belli olan paketleme sistemiyle tam güven sağlar. Karekod doğrulaması sayesinde ürünün gramajı, ayarı ve orijinalliği kolayca kontrol edilebilir, şeffaf fiyatlandırması ile anlık fiyatları görüntüleyerek gönül rahatlığıyla tercih edilebilir.\n\nKısacası 14'lük, herkesin altına erişimini kolaylaştıran, güveni ve şıklığı bir arada sunan, yeni nesil özel konseptli bir üründür."
+      answer: "14'lük, geleneksel altın birikiminden farklı olarak tasarlanmış, 14 ayar saf altın içeren özel bir konsepttir. Bu ürünler, takı niteliğinde şık bir görünüme sahip olmasının yanı sıra, resmi damgalı, sertifikalı ve karekodlu yapısıyla güvenilir bir birikim yapma aracı olarak öne çıkar.\n\nİnsanımızın birikim alışkanlıkları ile hediye kültürümüz arasında köprü kurarak hem estetik hem de ekonomik değer sunar. Farklı gramajlı seçenekleri sayesinde herkesin kolaylıkla ulaşabileceği, bütçe dostu ama değerini koruyan bir alternatiftir.\n\nTürk toplumunun geleneksel tasarruf ve hediye kültürünü günümüz şartlarına uyarlayan 14'lük, günlük yaşamda takı olarak rahatlıkla kullanılabilecek şekilde tasarlanmıştır. Aynı zamanda özel günlerde sevdiklerine hediye edilebilecek anlamlı ve değerli bir seçenektir.\n\nŞık ve güvenli blister ambalajı, sahteciliğe karşı mühürlü yapısı ve açıldığında belli olan paketleme sistemiyle tam güven sağlar. Karekod doğrulaması sayesinde ürünün gramajı, ayarı ve orijinalliği kolayca kontrol edilebilir, şeffaf fiyatlandırması ile anlık fiyatları görüntüleyerek gönül rahatlığıyla tercih edilebilir.\n\nKısacası 14'lük, herkesin altına erişimini kolaylaştıran, güveni ve şıklığı bir arada sunan, yeni nesil özel konseptli bir üründür."
     },
     {
       id: 2,
       question: "Bu ürün yatırım altını mı?",
-      answer: "14'lük altın, takı niteliğinde ama güvenilir altın olarak tasarlanmıştır. Hem yatırım değeri hem de estetik değer taşır. 14 ayar altın kalitesinde olup, Altın Anne güvencesiyle üretilmektedir. Geleneksel yatırım altınından farklı olarak, aynı zamanda takı olarak da kullanılabilir."
+      answer: "14'lük, takı niteliğinde ama güvenilir altın olarak tasarlanmıştır. Hem birikim değeri hem de estetik değer taşır. 14 ayar altın kalitesinde olup, Altın Anne güvencesiyle üretilmektedir. Geleneksel birikim altınından farklı olarak, aynı zamanda takı olarak da kullanılabilir."
     },
     {
       id: 3,
       question: "Hangi gramajlarda mevcut?",
-      answer: "14'lük altın ürünlerimiz 1g, 2.5g, 5g, 10g gramaj seçeneklerinde mevcuttur. Bu çeşitlilik sayesinde her bütçeye uygun seçenekler sunuyoruz."
+      answer: "14'lük ürünlerimiz 1g, 2.5g, 5g, 10g gramaj seçeneklerinde mevcuttur. Bu çeşitlilik sayesinde her bütçeye uygun seçenekler sunuyoruz."
     },
     {
       id: 4,
-      question: "14'lük ile gram altın arasındaki fark nedir?",
-      answer: "14'lük altın, gram altına alternatif olarak tasarlanmış özel bir konsepttir. Gram altının yüksek maliyeti ve ziynet eşyalarının yatırım değeri eksikliği arasında köprü kuran, hem estetik hem de ekonomik değer taşıyan ürünlerdir. Düşük gramaj seçenekleri ile her keseye uygun fiyatlar sunar."
+      question: "14'lük ile takı, mücevher veya gram altın arasındaki fark nedir?",
+      answer: "14'lük, Takı, mücevher veya gram altının yüksek maliyeti ve ziynet eşyalarının birikim değeri eksikliği arasında köprü kuran, hem estetik hem de ekonomik değer taşıyan ürünlerdir. Düşük gramaj seçenekleri ile her keseye uygun fiyatlar sunar."
     },
     {
       id: 5,
       question: "Altının ayarı nedir?",
-      answer: "14'lük altın ürünlerimiz 14 ayar altındır. Bu, altının %58.5 oranında saf altın içerdiği anlamına gelir. Bu ayar, hem dayanıklılık hem de değer açısından optimal bir seçimdir."
+      answer: "14'lük ürünlerimiz 14 ayar altındır. Bu, altının %58.5 oranında saf altın içerdiği anlamına gelir. Bu ayar, hem dayanıklılık hem de değer açısından optimal bir seçimdir."
     },
     {
       id: 6,
@@ -60,7 +60,7 @@ const FAQ: React.FC = () => {
     {
       id: 10,
       question: "Nereden satın alabilirim?",
-      answer: "14'lük altın ürünlerimizi resmi satış kanalımız olan Altın Anne'den ve anlaşmalı tüm kuyumculardan güvenle satın alabilirsiniz."
+      answer: "14'lük ürünlerimizi resmi satış kanalımız olan Altın Anne'den ve anlaşmalı tüm kuyumculardan güvenle satın alabilirsiniz."
     },
     {
       id: 11,
@@ -80,7 +80,7 @@ const FAQ: React.FC = () => {
     {
       id: 14,
       question: "Altın Anne kimdir?",
-      answer: "DEMAŞ A.Ş., Borsa İstanbul üyesi olan köklü bir altın firmasıdır. Sektörde güvenilirliği ve kalitesi ile tanınan firma, 14'lük altın konseptini geliştirerek sektöre yenilik getirmiştir."
+      answer: "DEMAŞ A.Ş., Borsa İstanbul üyesi olan köklü bir altın firmasıdır. Sektörde güvenilirliği ve kalitesi ile tanınan firma, 14'lük konseptini geliştirerek sektöre yenilik getirmiştir."
     }
   ];
 
@@ -99,7 +99,7 @@ const FAQ: React.FC = () => {
         <div className="faq-hero-container">
           <h1 className="faq-hero-title">Sık Sorulan Sorular</h1>
           <p className="faq-hero-subtitle">
-            14'lük altın hakkında merak ettiğiniz her şey
+            14'lük hakkında merak ettiğiniz her şey
           </p>
         </div>
       </section>
@@ -113,7 +113,7 @@ const FAQ: React.FC = () => {
             </div>
             <h2>Merak Ettikleriniz</h2>
             <p>
-              14'lük altın konsepti hakkında en çok sorulan soruları ve cevaplarını 
+              14'lük konsepti hakkında en çok sorulan soruları ve cevaplarını 
               aşağıda bulabilirsiniz. Başka sorularınız varsa bizimle iletişime geçebilirsiniz.
             </p>
           </div>

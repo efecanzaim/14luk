@@ -114,9 +114,9 @@ const Redirect: React.FC = () => {
       <section className="product-preview">
         <div className="redirect-container">
           <div className="preview-content">
-            <h2>14'lük Altın Ürünleri</h2>
+            <h2>14'lük Ürünleri</h2>
             <p>
-              Altın Anne'de 14'lük altın ürünlerimizin tamamını bulabilir, 
+              Altın Anne'de 14'lük ürünlerimizin tamamını bulabilir, 
               güvenle satın alabilirsiniz.
             </p>
             <div className="product-types">

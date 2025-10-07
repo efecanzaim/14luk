@@ -22,7 +22,7 @@ const About: React.FC = () => {
             <h2>14 Ayar Altın: Değerli ve Akıllı Seçim</h2>
             <div className="info-content">
               <p>
-                <strong>14 ayar altın, altın yatırımında hiçbir şey kaybetmediğiniz, tam tersine kazandığınız bir seçimdir. </strong> 
+                <strong>14 ayar altın, altın birikimi sırasında hiçbir şey kaybetmediğiniz, tam tersine kazandığınız bir seçimdir. </strong> 
                 Çoğu kişi 14 ayar altının "düşük kalite" olduğunu düşünür, ancak bu tamamen yanlış bir algıdır.
               </p>
               <p>
@@ -35,8 +35,8 @@ const About: React.FC = () => {
                 Yani aynı para ile daha fazla altın sahibi olursunuz.
               </p>
               <p>
-                Altın Anne olarak, müşterilerimize en değerli yatırımı en uygun fiyatlarla sunuyoruz. 
-                14 ayar altın ile hem yatırım değerinizi koruyor hem de estetik bir takıya sahip oluyorsunuz.
+                Altın Anne olarak, müşterilerimize en değerli birikimi en uygun fiyatlarla sunuyoruz. 
+                14 ayar altın ile hem birikim değerinizi koruyor hem de estetik bir takıya sahip oluyorsunuz.
               </p>
             </div>
           </div>
@@ -44,29 +44,29 @@ const About: React.FC = () => {
           <div className="about-intro">
             <h2>14'lük Nedir?</h2>
             <p>
-              14'lük altın, geleneksel altın yatırımından farklı olarak tasarlanmış 
+              14'lük, geleneksel altın birikiminden farklı olarak tasarlanmış 
               özel bir konsepttir. Bu ürünler, takı niteliğinde ama güvenilir altın 
               olarak, her keseye uygun fiyatlı ama değerli alternatifler sunar.
             </p>
             <p>
-              Gram altının yüksek maliyeti ve ziynet eşyalarının yatırım değeri 
-              eksikliği arasında köprü kuran 14'lük altın, hem estetik hem de 
+              Gram altının yüksek maliyeti ve ziynet eşyalarının birikim değeri 
+              eksikliği arasında köprü kuran 14'lük, hem estetik hem de 
               ekonomik değer taşır.
             </p>
           </div>
 
           <div className="about-comparison">
-            <h2>Altın Yatırımından Farkı</h2>
+            <h2>Altın Birikiminden Farkı</h2>
             <div className="comparison-grid">
               <div className="comparison-item">
                 <div className="comparison-icon">
                   <TrendingUp size={40} />
                 </div>
-                <h3>Geleneksel Altın Yatırımı</h3>
+                <h3>Geleneksel Altın Birikimi</h3>
                 <ul>
                   <li>Yüksek gramaj gereksinimi</li>
                   <li>Yüksek maliyet</li>
-                  <li>Sadece yatırım amaçlı</li>
+                  <li>Sadece birikim amaçlı</li>
                   <li>Estetik değer yok</li>
                 </ul>
               </div>
@@ -74,12 +74,12 @@ const About: React.FC = () => {
                 <div className="comparison-icon">
                   <Star size={40} />
                 </div>
-                <h3>14'lük Altın</h3>
+                <h3>14'lük</h3>
                 <ul>
                   <li>Özel tasarım yatırım hediyelik mücevherat eşyası</li>
                   <li>Düşük gramaj seçenekleri</li>
                   <li>Uygun fiyatlı</li>
-                  <li>Hem yatırım hem takı</li>
+                  <li>Hem birikim hem takı</li>
                   <li>Estetik ve değerli</li>
                 </ul>
               </div>
@@ -87,7 +87,7 @@ const About: React.FC = () => {
           </div>
 
           <div className="about-features">
-            <h2>14'lük Altının Avantajları</h2>
+            <h2>14'lük Ürününün Avantajları</h2>
             <div className="features-grid">
               <div className="feature-item">
                 <div className="feature-icon">
@@ -128,7 +128,7 @@ const About: React.FC = () => {
                 <p>
                   Borsa İstanbul üyesi olan DEMAŞ A.Ş., altın sektöründe 
                   güvenilirliği ve kalitesi ile tanınan köklü bir firmadır. 
-                  14'lük altın konseptini geliştirerek, sektöre yenilikçi 
+                  14'lük konseptini geliştirerek, sektöre yenilikçi 
                   bir yaklaşım getirmiştir.
                 </p>
                 <ul>
@@ -142,7 +142,7 @@ const About: React.FC = () => {
                 <h3>Altın Anne</h3>
                 <p>
                   Altın Anne, DEMAŞ A.Ş.'nin e-ticaret markası olarak, 
-                  14'lük altın ürünlerinin resmi satış kanalıdır. 
+                  14'lük ürünlerinin resmi satış kanalıdır. 
                   Güvenilir alışveriş deneyimi ve müşteri desteği ile 
                   hizmet vermektedir.
                 </p>

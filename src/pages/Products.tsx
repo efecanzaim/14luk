@@ -20,10 +20,10 @@ const Products: React.FC = () => {
       id: '1',
       name: 'Klasik 14\'lük',
       type: 'square',
-      description: 'Klasik tasarım, zamansız güzellik. Geleneksel altın yatırımına modern bir alternatif.',
+      description: 'Klasik tasarım, zamansız güzellik. Geleneksel altın birikimine modern bir alternatif.',
       weights: ['1g', '2.5g', '5g', '10g'],
       price: 'Uygun fiyatlar',
-      features: ['14 ayar altın', 'Klasik tasarım', 'Yatırım değeri', 'Hediyelik uygun'],
+      features: ['14 ayar altın', 'Klasik tasarım', 'Birikim değeri', 'Hediyelik uygun'],
       image: `${process.env.PUBLIC_URL}/14luk-kare.png`
     },
     {
