@@ -1,0 +1,12 @@
+{
+  "name": "14luk-price-collector",
+  "version": "1.0.0",
+  "description": "Haremin Socket.IO bridge for PHP",
+  "main": "fetch-prices.js",
+  "dependencies": {
+    "socket.io-client": "^4.7.2"
+  },
+  "scripts": {
+    "install-deps": "npm install"
+  }
+}

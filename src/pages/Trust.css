@@ -20,7 +20,7 @@
   font-size: 48px;
   font-weight: 700;
   margin-bottom: 20px;
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .trust-hero-subtitle {
@@ -33,14 +33,14 @@
 
 /* Gold Quality Section */
 .gold-quality {
-  padding: 80px 0;
+  padding: 80px 0 60px;
   background: white;
 }
 
 .trust-container {
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 32px;
 }
 
 .quality-content h2 {
@@ -49,18 +49,19 @@
   color: #041234;
   text-align: center;
   margin-bottom: 50px;
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .quality-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 40px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 30px;
+  align-items: stretch;
 }
 
 .quality-card {
   background: linear-gradient(135deg, #f8fffe 0%, #e8f5f0 100%);
-  padding: 40px 30px;
+  padding: 36px 26px;
   border-radius: 20px;
   text-align: center;
   border: 1px solid #e0f0e8;
@@ -97,7 +98,7 @@
   color: #666;
 }
 
-/* DEMAŞ Section */
+/* Altın Anne Section */
 .demas-section {
   padding: 80px 0;
   background: linear-gradient(135deg, #f8fffe 0%, #e8f5f0 100%);
@@ -115,7 +116,7 @@
   font-weight: 700;
   color: #041234;
   margin-bottom: 25px;
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .demas-info p {
@@ -174,7 +175,7 @@
   color: #041234;
   text-align: center;
   margin-bottom: 50px;
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .shipping-grid {
@@ -241,7 +242,7 @@
   font-size: 36px;
   font-weight: 700;
   margin-bottom: 25px;
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .altin-anne-info p {
@@ -313,7 +314,7 @@
   font-weight: 700;
   color: #041234;
   margin-bottom: 20px;
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .cta-content p {
@@ -360,6 +361,17 @@
   background: #041234;
   color: white;
   transform: translateY(-2px);
+}
+
+@media (max-width: 1024px) {
+  .quality-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .trust-container {
+    padding: 0 24px;
+  }
 }
 
 /* Mobile Styles */

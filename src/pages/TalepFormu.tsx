@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import './TalepFormu.css';
 
 const TalepFormu: React.FC = () => {
@@ -28,11 +29,13 @@ const TalepFormu: React.FC = () => {
     };
 
     try {
-      const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx_hRiDEy3D2p14RmkDxEZpPh0yQE5GelMt3Lkgfucm8fN0RsXR_ntAqEIgwrqo1JX6/exec';
-      
-      console.log('Gönderilen veri:', data);
-      
-      const response = await fetch(GOOGLE_SCRIPT_URL, {
+      const GOOGLE_SCRIPT_URL = process.env.REACT_APP_GOOGLE_SCRIPT_URL || '';
+
+      if (!GOOGLE_SCRIPT_URL) {
+        throw new Error('Google Script URL not configured');
+      }
+
+      await fetch(GOOGLE_SCRIPT_URL, {
         method: 'POST',
         mode: 'no-cors',
         headers: {
@@ -40,8 +43,6 @@ const TalepFormu: React.FC = () => {
         },
         body: JSON.stringify(data)
       });
-
-      console.log('Response:', response);
       setSubmitStatus('success');
       (e.target as HTMLFormElement).reset();
     } catch (error) {
@@ -54,6 +55,13 @@ const TalepFormu: React.FC = () => {
 
   return (
     <div className="talep-formu">
+      <Helmet>
+        <title>Bayi Talep Formu - 14'lük Bayilik Başvurusu | 14luk.com</title>
+        <meta name="description" content="14'lük ürünleri için bayi olmak istiyorsanız talep formunu doldurun. Altın Anne güvencesiyle bayilik fırsatları." />
+        <meta name="keywords" content="bayi talep, bayilik, 14'lük bayi, iletişim formu" />
+        <link rel="canonical" href="https://14luk.com/talep-formu" />
+      </Helmet>
+      
       {/* Hero Section */}
       <section className="talep-formu-hero">
         <div className="talep-formu-hero-container">

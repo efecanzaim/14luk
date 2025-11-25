@@ -39,16 +39,16 @@
 }
 
 .logo-text {
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 28px;
-  font-weight: 700;
-  color: #ffffff; /* Başlangıçta beyaz */
+  font-weight: 900;
+  color: #ffb600; /* Hep sarı/turuncu */
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .fixed-navbar.scrolled .logo-text {
-  color: #041234; /* Scroll sonrası lacivert */
+  color: #ffb600; /* Scroll sonrası da sarı/turuncu */
 }
 
 .navbar-links {
@@ -64,7 +64,7 @@
   padding: 0.75rem 1.2rem;
   text-decoration: none;
   color: #ffffff; /* Başlangıçta beyaz */
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   font-size: 13px;
   text-transform: uppercase;
@@ -162,7 +162,7 @@
   padding: 0.75rem 1rem;
   text-decoration: none;
   color: #041234;
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   font-size: 14px;
   text-transform: uppercase;

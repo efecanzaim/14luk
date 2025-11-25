@@ -1,0 +1,39 @@
+# 14'lük Backend - Git Ignore
+
+# Konfigürasyon dosyaları (şifre içerir)
+config/db.php
+
+# Log dosyaları
+*.log
+error_log
+
+# Yüklenen dosyalar
+uploads/
+*.csv
+*.xlsx
+*.xls
+
+# Cache
+cache/
+*.cache
+
+# Backup dosyaları
+*.bak
+*.backup
+*.sql
+
+# OS dosyaları
+.DS_Store
+Thumbs.db
+
+# IDE dosyaları
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+

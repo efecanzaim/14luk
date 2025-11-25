@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Newspaper, Calendar, ExternalLink, Star, TrendingUp } from 'lucide-react';
 import './Press.css';
 
@@ -65,12 +66,19 @@ const Press: React.FC = () => {
 
   return (
     <div className="press">
+      <Helmet>
+        <title>Basında Biz - 14'lük Haberler ve Röportajlar | 14luk.com</title>
+        <meta name="description" content="14'lük hakkında basında çıkan haberler, röportajlar ve makaleler. Son haberler ve güncel gelişmeler." />
+        <meta name="keywords" content="14'lük haberler, basında biz, röportaj, makale, medya" />
+        <link rel="canonical" href="https://14luk.com/basinda-biz" />
+      </Helmet>
+      
       {/* Hero Section */}
       <section className="press-hero">
         <div className="press-hero-container">
           <h1 className="press-hero-title">Basında Biz</h1>
           <p className="press-hero-subtitle">
-            DEMAŞ A.Ş. ve Altın Anne ile ilgili haberler, röportajlar ve makaleler
+            Altın Anne ile ilgili haberler, röportajlar ve makaleler
           </p>
         </div>
       </section>

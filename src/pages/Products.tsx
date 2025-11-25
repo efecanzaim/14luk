@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { ShoppingBag, Star, Weight} from 'lucide-react';
 import './Products.css';
 
@@ -20,41 +21,41 @@ const Products: React.FC = () => {
       id: '1',
       name: 'Klasik 14\'lük',
       type: 'square',
-      description: 'Klasik tasarım, zamansız güzellik. Geleneksel altın birikimine modern bir alternatif.',
-      weights: ['1g', '2.5g', '5g', '10g'],
-      price: 'Uygun fiyatlar',
-      features: ['14 ayar altın', 'Klasik tasarım', 'Birikim değeri', 'Hediyelik uygun'],
+      description: 'Klasik tasarım, zamansız güzellik. Geleneksel altın birikimine modern bir alternatif. Hediye ve birikim olarak kullanma seçeneği.',
+      weights: ['1g', '2.5g', '5g', '10g', '20g', '50g', '100g'],
+      price: 'Erişilebilir fiyatlar',
+      features: ['14 ayar altın', 'Klasik tasarım', 'Birikim değeri', 'Hediye + birikim kullanımı'],
       image: `${process.env.PUBLIC_URL}/14luk-kare.png`
     },
     {
       id: '2',
       name: 'Yuvarlak 14\'lük',
       type: 'circle',
-      description: 'Ziynet benzeri şık görünüm. Estetik ve değerli, her duruma uygun.',
-      weights: ['1g', '2.5g', '5g', '10g'],
-      price: 'Uygun fiyatlar',
-      features: ['14 ayar altın', 'Şık tasarım', 'Ziynet benzeri', 'Çok amaçlı kullanım'],
+      description: 'Ziynet benzeri şık görünüm. Estetik ve değerli, her duruma uygun. Çok amaçlı kullanım imkanı sunar.',
+      weights: ['1g', '2.5g', '5g', '10g', '20g', '50g', '100g'],
+      price: 'Erişilebilir fiyatlar',
+      features: ['14 ayar altın', 'Şık tasarım', 'Ziynet benzeri', 'Çok amaçlı kullanım', 'Uygun fiyat'],
       image: `${process.env.PUBLIC_URL}/14luk-yuvarlak.png`
     },
     {
       id: '3',
       name: 'Kalp 14\'lük (Yakında)',
       type: 'heart',
-      description: 'Hediyelik ve duygusal değer. Özel günlerde anlamlı hediye.',
-      weights: ['1g', '2.5g', '5g', '10g'],
-      price: 'Uygun fiyatlar',
-      features: ['14 ayar altın', 'Kalp tasarım', 'Hediyelik uygun', 'Duygusal değer'],
+      description: 'Hediyelik ve duygusal değer. Özel günlerde anlamlı hediye. Şık tasarımlar sayesinde düğünlerde tercih edilir.',
+      weights: ['1g', '2.5g', '5g', '10g', '20g', '50g', '100g'],
+      price: 'Erişilebilir fiyatlar',
+      features: ['14 ayar altın', 'Kalp tasarım', 'Hediye + koleksiyon', 'Duygusal değer'],
       image: `${process.env.PUBLIC_URL}/14luk-kalp.png`
     },
     {
       id: '4',
       name: 'Yonca 14\'lük (Yakında)',
       type: 'clover',
-      description: 'Şans ve bereket sembolü. Özel tasarım ile şansınızı artırın.',
-      weights: ['1g', '2.5g', '5g', '10g'],
-      price: 'Uygun fiyatlar',
-      features: ['14 ayar altın', 'Yonca tasarım', 'Şans sembolü', 'Özel koleksiyon'],
-      image: `${process.env.PUBLIC_URL}/14luk-kare.png`
+      description: 'Şans ve bereket sembolü. Özel tasarım ile şansınızı artırın. Koleksiyon değeri taşıyan özel parça.',
+      weights: ['1g', '2.5g', '5g', '10g', '20g', '50g', '100g'],
+      price: 'Erişilebilir fiyatlar',
+      features: ['14 ayar altın', 'Yonca tasarım', 'Şans sembolü', 'Koleksiyon değeri'],
+      image: `${process.env.PUBLIC_URL}/14luk-yonca.png`
     }
   ];
 
@@ -62,12 +63,24 @@ const Products: React.FC = () => {
 
   return (
     <div className="products">
+      <Helmet>
+        <title>14'lük Ürünleri - Klasik, Yuvarlak, Kalp ve Yonca | 14luk.com</title>
+        <meta name="description" content="14 ayar saf altın kalitesiyle üretilmiş 14'lük koleksiyonu. Klasik (Dikdörtgen), yuvarlak, kalp ve yonca formlarında özel tasarımlar. 1gr'dan 100gr'a kadar geniş gramaj seçenekleri." />
+        <meta name="keywords" content="14'lük ürünler, klasik altın, yuvarlak altın, kalp altın, yonca altın, 14 ayar, gram altın" />
+        <link rel="canonical" href="https://14luk.com/urunler" />
+        
+        <meta property="og:title" content="14'lük Ürünleri - Klasik, Yuvarlak, Kalp ve Yonca" />
+        <meta property="og:description" content="14 ayar saf altın kalitesiyle üretilmiş 14'lük koleksiyonu. 1gr'dan 100gr'a kadar geniş gramaj seçenekleri." />
+        <meta property="og:url" content="https://14luk.com/urunler" />
+      </Helmet>
+      
       {/* Hero Section */}
       <section className="products-hero">
         <div className="products-hero-container">
-          <h1 className="products-hero-title">14'lük Ürün Çeşitleri</h1>
+          <h1 className="products-hero-title">14'lük Koleksiyonu</h1>
           <p className="products-hero-subtitle">
-            Her zevke ve ihtiyaca uygun, kaliteli ve güvenilir özel tasarım yatırım hediyelik mücevherat eşyaları
+            14 ayar saf altın kalitesiyle üretilmiş, Klasik (Dikdörtgen), yuvarlak, kalp ve yonca formlarında özel tasarımlar. 
+            1 gr'dan 100 gr'a kadar geniş gramaj seçenekleriyle, hem birikim hem hediye ihtiyacına hitap eder.
           </p>
         </div>
       </section>
@@ -84,6 +97,7 @@ const Products: React.FC = () => {
                     src={product.image} 
                     alt={product.name}
                     className="product-photo"
+                    loading="eager"
                   />
                 </div>
                 

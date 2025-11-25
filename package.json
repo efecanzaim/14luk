@@ -2,7 +2,7 @@
   "name": "14luk",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://nunch1.github.io/14luk",
+  "homepage": "https://14luk.com",
   "dependencies": {
     "@react-three/fiber": "^9.3.0",
     "@testing-library/dom": "^10.4.1",
@@ -21,9 +21,12 @@
     "ogl": "^1.0.11",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "react-helmet-async": "^2.0.5",
     "react-icons": "^5.5.0",
     "react-router-dom": "^7.8.2",
     "react-scripts": "5.0.1",
+    "recharts": "^3.2.1",
+    "socket.io-client": "^4.8.1",
     "swiper": "^12.0.1",
     "tailwind-merge": "^3.3.1",
     "three": "^0.179.1",
@@ -33,10 +36,20 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "postbuild": "react-snap",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
+  },
+  "reactSnap": {
+    "inlineCss": true,
+    "skipThirdPartyRequests": true,
+    "cacheAjaxRequests": false,
+    "minifyHtml": {
+      "collapseWhitespace": true,
+      "removeComments": true
+    }
   },
   "eslintConfig": {
     "extends": [
@@ -58,6 +71,7 @@
   },
   "devDependencies": {
     "@types/three": "^0.179.0",
-    "gh-pages": "^6.2.0"
+    "gh-pages": "^6.2.0",
+    "react-snap": "^1.23.0"
   }
 }

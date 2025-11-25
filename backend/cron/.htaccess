@@ -1,0 +1,7 @@
+# 14'lük Altın - Cron Klasörü Güvenliği
+# Bu klasördeki dosyalara web erişimi tamamen engellendi
+
+# Tüm erişimi engelle
+Order Allow,Deny
+Deny from all
+

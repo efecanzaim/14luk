@@ -1,0 +1,46 @@
+# 14'lük Altın - API Güvenlik
+
+# CORS headers (verify.php içinde de var ama yedek olsun)
+<IfModule mod_headers.c>
+    # Sadece belirli domain'lerden erişime izin ver
+    SetEnvIf Origin "^https?://(www\.)?(14luk\.com|localhost:3000)$" AccessControlAllowOrigin=$0
+    Header set Access-Control-Allow-Origin %{AccessControlAllowOrigin}e env=AccessControlAllowOrigin
+    Header set Access-Control-Allow-Methods "POST, OPTIONS"
+    Header set Access-Control-Allow-Headers "Content-Type"
+</IfModule>
+
+# Dizin listelemeyi kapat
+Options -Indexes
+
+# PHP hata gösterimini kapat
+php_flag display_errors Off
+php_flag log_errors On
+
+# Rate limiting için session
+php_flag session.auto_start On
+
+# Güvenlik headers
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "DENY"
+    Header set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+# Hassas dosya uzantılarına erişimi engelle
+<FilesMatch "\.(sql|txt|log|bak|old|backup|save|tmp|swp|swo|dist|orig|zip|tar|gz|rar|7z|bz2|tgz|env|ini|conf|config|json|yml|yaml|xml)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Yedek ve geçici dosyaları engelle
+<FilesMatch "^(\..*|.*~|.*\.backup|.*\.bak|.*\.old|.*\.orig|.*\.save|.*\.swp|.*\.tmp)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# .env dosyalarını engelle
+<FilesMatch "^\.env">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+

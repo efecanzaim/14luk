@@ -60,7 +60,7 @@
   font-weight: 700;
   margin-bottom: 20px;
   line-height: 1.2;
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 900;
 }
 
@@ -73,7 +73,7 @@
   font-weight: 400;
   color: #ffb600;
   margin-top: 10px;
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
 }
 
@@ -173,6 +173,18 @@
   transform: translateY(-2px);
 }
 
+.hero-cta.tertiary {
+  background: transparent;
+  color: white;
+  border-color: white;
+}
+
+.hero-cta.tertiary:hover {
+  background: white;
+  color: #041234;
+  transform: translateY(-2px);
+}
+
 .hero-info {
   margin-top: 60px;
   max-width: 800px;
@@ -186,7 +198,7 @@
   color: rgba(255, 255, 255, 0.9);
   text-align: center;
   font-weight: 400;
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0 20px;
 }
@@ -258,25 +270,25 @@
 }
 
 .altin-fiyatlari-card {
-  background: white;
+  background: #041234;
   border-radius: 25px;
   padding: 40px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-  border: 1px solid #e0f0e8;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  border: 2px solid #ffb600;
   text-align: center;
 }
 
 .altin-fiyatlari-card h2 {
   font-size: 36px;
   font-weight: 700;
-  color: #041234;
+  color: #ffb600;
   margin-bottom: 20px;
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .timestamp {
   font-size: 16px;
-  color: #666;
+  color: #d1d4dc;
   margin-bottom: 30px;
   font-weight: 500;
 }
@@ -294,10 +306,9 @@
   grid-template-columns: 1.5fr 1fr 1fr 1fr;
   gap: 10px;
   padding: 20px 25px;
-  background: #f8f9fa;
-  color: #041234;
-  border: 2px solid #041234;
-  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffb600;
+  border-bottom: 2px solid #ffb600;
   font-weight: 600;
   font-size: 13px;
 }
@@ -307,31 +318,69 @@
   grid-template-columns: 1.5fr 1fr 1fr 1fr;
   gap: 10px;
   padding: 20px 25px;
-  background: #f8fffe;
-  border: 1px solid #e0f0e8;
-  border-radius: 15px;
+  background: transparent;
+  border-bottom: 1px solid #ffb600;
   font-size: 13px;
   align-items: center;
+  color: #fff;
 }
 
 .urun-tipi {
   font-weight: 600;
-  color: #041234;
+  color: #ffb600;
   text-align: left;
 }
 
 .alis, .satis {
-  color: #666;
+  color: #fff;
   text-align: center;
 }
 
 .fark {
   text-align: center;
   font-weight: 600;
+  color: #fff;
 }
 
 .fark.artis {
-  color: #28a745;
+  color: #5aff91;
+  font-weight: 600;
+}
+
+.fark.azalis {
+  color: #ff6b6b;
+  font-weight: 600;
+}
+
+/* Fiyat Değişim Animasyonları */
+.price-change-up {
+  animation: flashUp 1s ease-out;
+}
+
+.price-change-down {
+  animation: flashDown 1s ease-out;
+}
+
+@keyframes flashUp {
+  0% {
+    background: rgba(90, 255, 145, 0.4);
+    box-shadow: 0 0 20px rgba(90, 255, 145, 0.6);
+  }
+  100% {
+    background: transparent;
+    box-shadow: none;
+  }
+}
+
+@keyframes flashDown {
+  0% {
+    background: rgba(255, 107, 107, 0.4);
+    box-shadow: 0 0 20px rgba(255, 107, 107, 0.6);
+  }
+  100% {
+    background: transparent;
+    box-shadow: none;
+  }
 }
 
 /* Features Section */
@@ -353,7 +402,7 @@
   font-weight: 700;
   color: #041234;
   margin-top: 40px;
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* Product Types Section */
@@ -463,7 +512,7 @@
   font-size: 36px;
   font-weight: 700;
   margin-bottom: 20px;
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .cta-content p {
@@ -498,7 +547,7 @@
   font-weight: 700;
   color: #041234;
   margin-bottom: 20px;
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .main-headline {
@@ -506,7 +555,7 @@
   font-weight: 700;
   color: #041234;
   margin-bottom: 60px;
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .product-full-description {
@@ -852,7 +901,7 @@
   font-weight: 600;
   color: #041234;
   margin-bottom: 15px;
-  font-family: 'Geist', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   flex-shrink: 0;
 }
 

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { HashRouter as Router, Routes, Route, useLocation, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation, Link } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import { ShoppingCart, House, Menu, X } from 'lucide-react';
 import Footer from './components/Footer';
 import './components/FixedNavbar.css';
@@ -114,9 +115,11 @@ function AppContent() {
 
 function App() {
   return (
-    <Router>
-      <AppContent />
-    </Router>
+    <HelmetProvider>
+      <Router>
+        <AppContent />
+      </Router>
+    </HelmetProvider>
   );
 }
 

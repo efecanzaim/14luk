@@ -1,0 +1,38 @@
+# 14'lük Altın - Admin Paneli Güvenlik (Basitleştirilmiş)
+
+# IP Kısıtlaması - Apache 2.4 Syntax
+<RequireAny>
+    Require ip 212.125.19.1
+    Require ip 151.250.222.232
+    Require ip 127.0.0.1
+    Require ip ::1
+</RequireAny>
+
+# Dizin listelemeyi kapat
+Options -Indexes
+
+# PHP Ayarları
+<IfModule mod_php.c>
+    php_flag display_errors On
+    php_flag log_errors On
+    php_value upload_max_filesize 10M
+    php_value post_max_size 10M
+    php_value session.cookie_httponly 1
+</IfModule>
+
+# Güvenlik Headers
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "DENY"
+    Header set X-XSS-Protection "1; mode=block"
+    Header set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
+</IfModule>
+
+# Hassas dosyaları engelle - Apache 2.4 Syntax
+<FilesMatch "\.(sql|log|bak|backup|env)$">
+    Require all denied
+</FilesMatch>
+
+<FilesMatch "^\.env">
+    Require all denied
+</FilesMatch>

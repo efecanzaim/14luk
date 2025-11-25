@@ -54,5 +54,4 @@ function testFunction() {
   };
   
   const result = doPost(mockEvent);
-  console.log(result.getContent());
 }

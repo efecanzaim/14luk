@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { ChevronDown, ChevronUp, HelpCircle } from 'lucide-react';
 import './FAQ.css';
 
@@ -15,42 +16,42 @@ const FAQ: React.FC = () => {
     {
       id: 1,
       question: "14'lük nedir?",
-      answer: "14'lük, geleneksel altın birikiminden farklı olarak tasarlanmış, 14 ayar saf altın içeren özel bir konsepttir. Bu ürünler, takı niteliğinde şık bir görünüme sahip olmasının yanı sıra, resmi damgalı, sertifikalı ve karekodlu yapısıyla güvenilir bir birikim yapma aracı olarak öne çıkar.\n\nİnsanımızın birikim alışkanlıkları ile hediye kültürümüz arasında köprü kurarak hem estetik hem de ekonomik değer sunar. Farklı gramajlı seçenekleri sayesinde herkesin kolaylıkla ulaşabileceği, bütçe dostu ama değerini koruyan bir alternatiftir.\n\nTürk toplumunun geleneksel tasarruf ve hediye kültürünü günümüz şartlarına uyarlayan 14'lük, günlük yaşamda takı olarak rahatlıkla kullanılabilecek şekilde tasarlanmıştır. Aynı zamanda özel günlerde sevdiklerine hediye edilebilecek anlamlı ve değerli bir seçenektir.\n\nŞık ve güvenli blister ambalajı, sahteciliğe karşı mühürlü yapısı ve açıldığında belli olan paketleme sistemiyle tam güven sağlar. Karekod doğrulaması sayesinde ürünün gramajı, ayarı ve orijinalliği kolayca kontrol edilebilir, şeffaf fiyatlandırması ile anlık fiyatları görüntüleyerek gönül rahatlığıyla tercih edilebilir.\n\nKısacası 14'lük, herkesin altına erişimini kolaylaştıran, güveni ve şıklığı bir arada sunan, yeni nesil özel konseptli bir üründür."
+      answer: "14'lük koleksiyonu, 14 ayar saf altın kalitesiyle üretilmiş, Klasik (Dikdörtgen), yuvarlak, kalp ve yonca formlarında özel tasarımlar sunar. 1 gr'dan 100 gr'a kadar geniş gramaj seçenekleriyle, hem birikim hem hediye ihtiyacına hitap eder. Her ürün sertifikalıdır, özel ambalajlarda sunulur ve farklı kullanım alanları için klasik ve hediye ambalaj alternatifleri mevcuttur.\n\nAltın Anne e-ticaret platformu ve garantisiyle sunulan 14'lük, tüketiciye güven verirken satıcı için de güçlü bir marka desteği oluşturur. Sertifikalı paketleme, sigortalı kargo ve laboratuvar testleriyle doğrulanmış kalite standartları sayesinde, her ürün yüksek güvenilirlik ve değer sunar."
     },
     {
       id: 2,
-      question: "Bu ürün yatırım altını mı?",
-      answer: "14'lük, takı niteliğinde ama güvenilir altın olarak tasarlanmıştır. Hem birikim değeri hem de estetik değer taşır. 14 ayar altın kalitesinde olup, Altın Anne güvencesiyle üretilmektedir. Geleneksel birikim altınından farklı olarak, aynı zamanda takı olarak da kullanılabilir."
+      question: "Bu ürün birikim altını mı?",
+      answer: "14'lük altın, güvenilir bir altın olarak tasarlanmıştır. Hem birikim değeri hem de estetik değer taşır. 14 ayar altın kalitesinde olup, Altın Anne güvencesiyle üretilmektedir. Geleneksel birikim altınından farklı olarak, aynı zamanda hediye olarak da kullanılabilir."
     },
     {
       id: 3,
       question: "Hangi gramajlarda mevcut?",
-      answer: "14'lük ürünlerimiz 1g, 2.5g, 5g, 10g gramaj seçeneklerinde mevcuttur. Bu çeşitlilik sayesinde her bütçeye uygun seçenekler sunuyoruz."
+      answer: "14'lük altın ürünlerimiz şuan için 1g, 2.5g, 5g, 10g gramaj seçeneklerinde mevcuttur. Bu çeşitlilik sayesinde her bütçeye uygun seçenekler sunuyoruz. İleride farklı gramaj seçenekleri de ürün yelpazemize eklenecektir."
     },
     {
       id: 4,
-      question: "14'lük ile takı, mücevher veya gram altın arasındaki fark nedir?",
-      answer: "14'lük, Takı, mücevher veya gram altının yüksek maliyeti ve ziynet eşyalarının birikim değeri eksikliği arasında köprü kuran, hem estetik hem de ekonomik değer taşıyan ürünlerdir. Düşük gramaj seçenekleri ile her keseye uygun fiyatlar sunar."
+      question: "14'lük ile gram altın/ziynet arasındaki fark nedir?",
+      answer: "14'lük altın, gram altına alternatif olarak tasarlanmış özel bir konsepttir. Gram altının yüksek maliyeti ve ziynet eşyalarının birikim değeri eksikliği arasında köprü kuran, hem estetik hem de ekonomik değer taşıyan ürünlerdir. Düşük gramaj seçenekleri ile her keseye uygun fiyatlar sunar."
     },
     {
       id: 5,
       question: "Altının ayarı nedir?",
-      answer: "14'lük ürünlerimiz 14 ayar altındır. Bu, altının %58.5 oranında saf altın içerdiği anlamına gelir. Bu ayar, hem dayanıklılık hem de değer açısından optimal bir seçimdir."
+      answer: "14'lük altın ürünlerimiz 14 ayar altındır. Bu, altının %58.5 oranında saf altın içerdiği anlamına gelir. Bu ayar, hem dayanıklılık hem de değer açısından optimal bir seçimdir."
     },
     {
       id: 6,
-      question: "14 ayar ürün düğünde takı olarak verilir mi?",
-      answer: "Evet. Altın Anne 14'lük ürünleri, şık tasarımı ve sertifikalı güvenli ambalajı sayesinde düğünlerde ve özel günlerde hediye olarak gönül rahatlığıyla takılabilir."
+      question: "14 ayar ürün düğünde hediye olarak verilir mi?",
+      answer: "Evet. Altın Anne 14'lük ürünleri, şık tasarımı ve sertifikalı güvenli ambalajı sayesinde düğünlerde ve özel günlerde hediye olarak gönül rahatlığıyla verilebilir."
     },
     {
       id: 7,
       question: "14 ayar altını kuyumcular geri alır mı?",
-      answer: "Evet. Altın Anne iş birliği yapılan kuyumcular, 14 ayar ürünleri geri alım sistemine dahil eder. Ayrıca e-ticaret kanalı üzerinden de geri alım süreci şeffaf şekilde işletilir."
+      answer: "Evet. Altın Anne iş birliği yapılan kuyumcular, 14 ayar ürünleri geri alım sistemine dahil eder. Ayrıca e-ticaret kanalı üzerinden de geri alım süreci şeffaf şekilde işletilir. Altın Anne iş birliği olan kuyumcular 14'lük ürününü alabileceği gibi, iş birliği yapmayan kuyumculara ise sitemizde yer alan fiyatları göstererek satış yapabilirsiniz."
     },
     {
       id: 8,
       question: "14 ayar altın değer kaybettirir mi?",
-      answer: "Hayır. 14 ayar altın, içindeki has altın miktarına göre fiyatlanır. Altın fiyatı yükseldiğinde 14 ayar altının da değeri yükselir. Altın Anne markası altında satılan ürünler sertifikalı olduğu için değer kaybı riski yoktur."
+      answer: "Hayır. 14 ayar altın, içindeki has altın miktarına göre fiyatlanır. Altın fiyatı yükseldiğinde 14 ayar altının da değeri aynı oranda yükselir. Altın Anne markası altında satılan ürünler sertifikalı olduğu için değer kaybı riski yoktur."
     },
     {
       id: 9,
@@ -60,27 +61,22 @@ const FAQ: React.FC = () => {
     {
       id: 10,
       question: "Nereden satın alabilirim?",
-      answer: "14'lük ürünlerimizi resmi satış kanalımız olan Altın Anne'den ve anlaşmalı tüm kuyumculardan güvenle satın alabilirsiniz."
+      answer: "14'lük altın ürünlerimizi resmi satış kanalımız olan Altın Anne'den ve anlaşmalı tüm kuyumculardan güvenle satın alabilirsiniz"
     },
     {
       id: 11,
       question: "Ambalaj güvenilir mi?",
-      answer: "Evet. Tüm ürünler QR kodlu, sertifikalı, mühürlü ambalaj ile sunulur. Ambalaj açıldığında belli olur ve ürünü kolayca doğrulamanızı sağlar. Bu sistem, sahte ya da düşük ayarlı ürün riskini tamamen ortadan kaldırır."
+      answer: "Evet. Tüm ürünler QR kodlu, sertifikalı, mor ışıkta belli olan hologramlı, mühürlü ambalaj ile sunulur. Ambalaj açıldığında belli olur ve ürünü kolayca doğrulamanızı sağlar. Bu sistem, sahte ya da düşük ayarlı ürün riskini tamamen ortadan kaldırır."
     },
     {
       id: 12,
       question: "QR kod ne işe yarar?",
-      answer: "QR kodu okutarak:\n• Ürünün doğruluğunu ve ayarını görebilirsiniz,\n• Sertifika bilgilerini kontrol edebilirsiniz,\n• Güncel geri alım fiyatını öğrenebilirsiniz."
+      answer: "QR kodu okutarak: Ürünün doğruluğunu ve ayarını görebilirsiniz, Sertifika bilgilerini kontrol edebilirsiniz, Güncel geri alım fiyatını öğrenebilirsiniz."
     },
     {
       id: 13,
       question: "Kargo ve sigorta süreci nasıl işliyor?",
       answer: "Tüm gönderilerimiz sigortalı kargo ile güvenle taşınır. Özel ambalajlama ile ürünleriniz korunur ve kimlik kontrolü ile güvenli teslimat yapılır. Kargo süreci genellikle 1-3 iş günü içerisinde tamamlanır."
-    },
-    {
-      id: 14,
-      question: "Altın Anne kimdir?",
-      answer: "DEMAŞ A.Ş., Borsa İstanbul üyesi olan köklü bir altın firmasıdır. Sektörde güvenilirliği ve kalitesi ile tanınan firma, 14'lük konseptini geliştirerek sektöre yenilik getirmiştir."
     }
   ];
 
@@ -94,6 +90,17 @@ const FAQ: React.FC = () => {
 
   return (
     <div className="faq">
+      <Helmet>
+        <title>Sık Sorulan Sorular - 14'lük Hakkında Merak Edilenler | 14luk.com</title>
+        <meta name="description" content="14'lük nedir? Hangi gramajlarda mevcut? Geri alım nasıl yapılır? 14'lük hakkında merak edilen tüm soruların cevapları burada." />
+        <meta name="keywords" content="14'lük SSS, sık sorulan sorular, 14 ayar altın, geri alım, gramaj, fiyat" />
+        <link rel="canonical" href="https://14luk.com/sik-sorulan-sorular" />
+        
+        <meta property="og:title" content="Sık Sorulan Sorular - 14'lük" />
+        <meta property="og:description" content="14'lük hakkında merak edilen tüm soruların cevapları." />
+        <meta property="og:url" content="https://14luk.com/sik-sorulan-sorular" />
+      </Helmet>
+      
       {/* Hero Section */}
       <section className="faq-hero">
         <div className="faq-hero-container">

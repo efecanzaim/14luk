@@ -14,7 +14,7 @@ const Redirect: React.FC = () => {
         if (prev <= 1 && !hasRedirectedRef.current) {
           hasRedirectedRef.current = true;
           setHasRedirected(true);
-          window.open('https://altinanne.com', '_blank');
+          window.location.href = 'https://altinanne.com';
           clearInterval(timer);
           return 0;
         }
@@ -104,7 +104,7 @@ const Redirect: React.FC = () => {
                 <Award size={40} />
               </div>
               <h3>Kalite Garantisi</h3>
-              <p>DEMAŞ A.Ş. güvencesi ile kaliteli ürünler</p>
+              <p>Altın Anne güvencesi ile kaliteli ürünler</p>
             </div>
           </div>
         </div>
@@ -119,18 +119,30 @@ const Redirect: React.FC = () => {
               Altın Anne'de 14'lük ürünlerimizin tamamını bulabilir, 
               güvenle satın alabilirsiniz.
             </p>
-            <div className="product-types">
-              <div className="product-type">
-                <div className="type-icon square">□</div>
-                <span>Dikdörtgen</span>
+            <div className="golden-products">
+              <div className="golden-item">
+                <div className="golden-image">
+                  <img src="/14luk-kare.png" alt="14'lük Dikdörtgen Altın" loading="eager" />
+                </div>
+                <span className="golden-name">Dikdörtgen</span>
               </div>
-              <div className="product-type">
-                <div className="type-icon circle">○</div>
-                <span>Yuvarlak</span>
+              <div className="golden-item">
+                <div className="golden-image">
+                  <img src="/14luk-yuvarlak.png" alt="14'lük Yuvarlak Altın" loading="eager" />
+                </div>
+                <span className="golden-name">Yuvarlak</span>
               </div>
-              <div className="product-type">
-                <div className="type-icon heart">♥</div>
-                <span>Kalp</span>
+              <div className="golden-item">
+                <div className="golden-image">
+                  <img src="/14luk-kalp.png" alt="14'lük Kalp Altın" loading="eager" />
+                </div>
+                <span className="golden-name">Kalp</span>
+              </div>
+              <div className="golden-item">
+                <div className="golden-image">
+                  <img src="/14luk-yonca.png" alt="14'lük Yonca Altın" loading="eager" />
+                </div>
+                <span className="golden-name">Yonca</span>
               </div>
             </div>
             <a 
@@ -153,9 +165,14 @@ const Redirect: React.FC = () => {
             <h3>İhtiyacınız mı var?</h3>
             <p>Alışveriş öncesi sorularınız için bizimle iletişime geçin</p>
             <div className="contact-buttons">
-              <Link to="/iletisim" className="contact-button">
+              <a 
+                href="https://api.whatsapp.com/send?phone=905319498765" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="contact-button"
+              >
                 İletişime Geç
-              </Link>
+              </a>
               <Link to="/sik-sorulan-sorular" className="contact-button secondary">
                 SSS
               </Link>
