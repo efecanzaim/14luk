@@ -1708,8 +1708,185 @@ function logCertificateAction($actionType, $serialNumber, $details, $performedBy
         <?php
         $currentPage = $_GET['page'] ?? 'home';
         
-        if ($currentPage === 'home'): ?>
+        if ($currentPage === 'home'): 
+            // Ürün istatistiklerini çek
+            try {
+                $pdo = getDBConnection();
+                
+                // Ürün tipine göre sayıları
+                $productTypeStmt = $pdo->prepare("
+                    SELECT product_type, COUNT(*) as count 
+                    FROM certificates 
+                    WHERE status = 'active'
+                    GROUP BY product_type 
+                    ORDER BY product_type
+                ");
+                $productTypeStmt->execute();
+                $productTypeStats = $productTypeStmt->fetchAll(PDO::FETCH_ASSOC);
+                
+                // Ağırlığa göre sayıları (normalize edilmiş)
+                $weightStmt = $pdo->prepare("
+                    SELECT weight, COUNT(*) as count 
+                    FROM certificates 
+                    WHERE status = 'active'
+                    GROUP BY weight 
+                    ORDER BY weight
+                ");
+                $weightStmt->execute();
+                $weightStatsRaw = $weightStmt->fetchAll(PDO::FETCH_ASSOC);
+                
+                // Ağırlık verilerini normalize et ve birleştir
+                $weightStats = [];
+                $processedCount = 0; // İşlenen kayıt sayısını takip et
+                
+                foreach ($weightStatsRaw as $stat) {
+                    // Ağırlık değerini normalize et: boşlukları kaldır, küçük harfe çevir
+                    $rawWeight = trim($stat['weight']);
+                    $normalizedWeight = strtolower($rawWeight);
+                    $normalizedWeight = preg_replace('/\s+/', '', $normalizedWeight); // Tüm boşlukları kaldır
+                    
+                    // Sayısal değeri ve birimi ayır - daha esnek pattern
+                    // Örnek: "2.5gr", "2.5 gr", "2.5g", "2.5", "10gr", "10 gr" vb.
+                    if (preg_match('/^(\d+(?:\.\d+)?)(gr|g|gram)?$/i', $normalizedWeight, $matches)) {
+                        $numericValue = $matches[1];
+                        $unit = isset($matches[2]) ? strtolower($matches[2]) : 'gr';
+                        
+                        // Birimi standartlaştır (g, gram -> gr)
+                        if ($unit === 'g' || $unit === 'gram' || $unit === '') {
+                            $unit = 'gr';
+                        }
+                        
+                        // Normalize edilmiş ağırlık anahtarı (sayısal değer + birim)
+                        $normalizedKey = $numericValue . $unit;
+                        
+                        // Normalize edilmiş ağırlık için toplam sayıyı hesapla
+                        if (isset($weightStats[$normalizedKey])) {
+                            $weightStats[$normalizedKey]['count'] += $stat['count'];
+                        } else {
+                            $weightStats[$normalizedKey] = [
+                                'weight' => $normalizedKey,
+                                'count' => $stat['count']
+                            ];
+                        }
+                        
+                        $processedCount += $stat['count'];
+                    } else {
+                        // Regex eşleşmeyen değerleri de ekle (hata ayıklama için)
+                        // Ancak önce orijinal değeri kullan
+                        if (isset($weightStats[$rawWeight])) {
+                            $weightStats[$rawWeight]['count'] += $stat['count'];
+                        } else {
+                            $weightStats[$rawWeight] = [
+                                'weight' => $rawWeight,
+                                'count' => $stat['count']
+                            ];
+                        }
+                        $processedCount += $stat['count'];
+                    }
+                }
+                
+                // Sayıya göre sırala (büyükten küçüğe)
+                usort($weightStats, function($a, $b) {
+                    return $b['count'] - $a['count'];
+                });
+                
+                // Toplam aktif sertifika sayısı
+                $totalStmt = $pdo->prepare("SELECT COUNT(*) as total FROM certificates WHERE status = 'active'");
+                $totalStmt->execute();
+                $totalActive = $totalStmt->fetch()['total'];
+                
+                // Ağırlık istatistiklerinin toplamını hesapla (doğrulama için)
+                $weightStatsTotal = array_sum(array_column($weightStats, 'count'));
+                
+                // Eğer toplamlar eşleşmiyorsa, bir uyarı göster (debug için)
+                // Not: Bu normal olabilir çünkü bazı kayıtlarda ağırlık NULL olabilir
+                $weightStatsValidation = ($weightStatsTotal == $totalActive);
+                
+            } catch (Exception $e) {
+                $productTypeStats = [];
+                $weightStats = [];
+                $totalActive = 0;
+            }
+        ?>
             <!-- Ana Sayfa İçeriği -->
+            
+            <!-- Ürün İstatistikleri -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i data-lucide="bar-chart-3"></i>
+                    </div>
+                    <h2>Ürün Stok Durumu</h2>
+                </div>
+                
+                <!-- Toplam Aktif Sertifika -->
+                <div style="background: linear-gradient(135deg, #041234 0%, #0a1f4a 100%); color: white; padding: 20px; border-radius: 12px; margin-bottom: 25px; text-align: center;">
+                    <div style="font-size: 14px; opacity: 0.9; margin-bottom: 8px;">Toplam Aktif Sertifika</div>
+                    <div style="font-size: 42px; font-weight: 700;"><?php echo number_format($totalActive, 0, ',', '.'); ?></div>
+                </div>
+                
+                <!-- Ürün Tipine Göre Dağılım -->
+                <div style="margin-bottom: 30px;">
+                    <h3 style="color: #041234; font-size: 18px; font-weight: 600; margin-bottom: 15px; display: flex; align-items: center; gap: 8px;">
+                        <i data-lucide="package" style="width: 20px; height: 20px;"></i>
+                        Ürün Tipine Göre Dağılım
+                    </h3>
+                    <div class="stats-grid">
+                        <?php if (!empty($productTypeStats)): ?>
+                            <?php foreach ($productTypeStats as $stat): ?>
+                                <div class="stat-card">
+                                    <div class="stat-value"><?php echo number_format($stat['count'], 0, ',', '.'); ?></div>
+                                    <div class="stat-label"><?php echo htmlspecialchars($stat['product_type']); ?></div>
+                                </div>
+                            <?php endforeach; ?>
+                        <?php else: ?>
+                            <div style="text-align: center; padding: 20px; color: #666; grid-column: 1 / -1;">
+                                Henüz ürün kaydı bulunmuyor.
+                            </div>
+                        <?php endif; ?>
+                    </div>
+                </div>
+                
+                <!-- Ağırlığa Göre Dağılım -->
+                <div>
+                    <h3 style="color: #041234; font-size: 18px; font-weight: 600; margin-bottom: 15px; display: flex; align-items: center; gap: 8px;">
+                        <i data-lucide="weight" style="width: 20px; height: 20px;"></i>
+                        Ağırlığa Göre Dağılım
+                    </h3>
+                    <div class="stats-grid">
+                        <?php if (!empty($weightStats)): ?>
+                            <?php foreach ($weightStats as $stat): 
+                                // Ağırlık gösterimini formatla: "2.5gr" -> "2.5 gr"
+                                $displayWeight = preg_replace('/(\d+(?:\.\d+)?)(gr|g)$/i', '$1 gr', $stat['weight']);
+                            ?>
+                                <div class="stat-card">
+                                    <div class="stat-value"><?php echo number_format($stat['count'], 0, ',', '.'); ?></div>
+                                    <div class="stat-label"><?php echo htmlspecialchars($displayWeight); ?></div>
+                                </div>
+                            <?php endforeach; ?>
+                        <?php else: ?>
+                            <div style="text-align: center; padding: 20px; color: #666; grid-column: 1 / -1;">
+                                Henüz ağırlık kaydı bulunmuyor.
+                            </div>
+                        <?php endif; ?>
+                    </div>
+                    
+                    <!-- Doğrulama Bilgisi (Debug için) -->
+                    <?php if (isset($weightStatsTotal) && isset($weightStatsValidation)): ?>
+                    <div style="margin-top: 15px; padding: 12px; background: <?php echo $weightStatsValidation ? '#d4edda' : '#fff3cd'; ?>; border: 1px solid <?php echo $weightStatsValidation ? '#28a745' : '#ffc107'; ?>; border-radius: 8px; font-size: 13px; color: <?php echo $weightStatsValidation ? '#155724' : '#856404'; ?>;">
+                        <strong>Doğrulama:</strong> 
+                        Ağırlık istatistikleri toplamı: <strong><?php echo number_format($weightStatsTotal, 0, ',', '.'); ?></strong> | 
+                        Toplam aktif sertifika: <strong><?php echo number_format($totalActive, 0, ',', '.'); ?></strong>
+                        <?php if (!$weightStatsValidation): ?>
+                            <br><small>⚠️ Fark: <?php echo number_format(abs($totalActive - $weightStatsTotal), 0, ',', '.'); ?> kayıt (NULL veya geçersiz ağırlık değerleri olabilir)</small>
+                        <?php else: ?>
+                            <br><small>✅ Tüm kayıtlar başarıyla işlendi</small>
+                        <?php endif; ?>
+                    </div>
+                    <?php endif; ?>
+                </div>
+            </div>
+            
             <div class="info-box">
                 <strong style="display: flex; align-items: center; gap: 8px;">
                     <i data-lucide="info" style="width: 20px; height: 20px;"></i>
